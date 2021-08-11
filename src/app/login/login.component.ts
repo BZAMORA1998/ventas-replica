@@ -15,6 +15,19 @@ export class LoginComponent implements OnInit {
     
   }
 
+  typeInputF="password";
+   showPF:boolean=true;
+    mostrarPassword(){
+  
+      if(this.typeInputF=="text"){
+        this.showPF=true;
+        this.typeInputF="password";
+      }else{
+        this.showPF=false;
+        this.typeInputF="text";
+      }
+    }
+
   ngOnInit(): void {
     $("#usuario").focus(function() {
       $("#usuarioF").css("margin-top",-20);

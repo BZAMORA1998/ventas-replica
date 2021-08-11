@@ -23,3 +23,11 @@
     border-radius: none;
     border-bottom: 1px solid blue;
 }
+
+.fai{
+    position: absolute;
+    margin-left: 270px;
+    margin-top: -30px;
+    border: none;
+    background-color: transparent;
+}
