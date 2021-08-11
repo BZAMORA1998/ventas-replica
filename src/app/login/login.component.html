@@ -1,0 +1,25 @@
+
+<div class="container-fluid login-container d-flex flex-wrap justify-content-center align-content-center">
+    <div class="card w-25">
+        <div class="mt-4 d-flex flex-column flex-wrap justify-content-center align-content-center">
+            <i class="fas fa-user-circle fa-7x d-flex justify-content-center"></i> 
+            <p>Inicia sesión con tu cuenta</p>
+        </div>
+            
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                <label for="usuario" id="usuarioF" ><i class="fas fa-user-lock mr-2"></i> Usuario</label>
+                <input type="text" class="form-control mt-3" id="usuario" 
+                name="txt_usuario"  #txt_usuario="ngModel" [(ngModel)]="usuario" autofocus required>
+                </div>
+                <div class="form-group">
+                <label for="contrasena" id="contrasenaF"><i class="fas fa-key mr-2"></i> Contraseña</label>
+                <input type="text" class="form-control mt-5" id="contrasena"
+                name="txt_contrasena"  #txt_contrasena="ngModel" [(ngModel)]="contrasena" required>
+                </div>
+            </form>
+            <button type="button" class="btn btn-primary w-100">Iniciar Sesión</button>
+        </div>
+      </div>
+</div>
