@@ -3,6 +3,8 @@
         "iniciarSesion":"Inicia sesión con tu cuenta",
         "usuario":"Usuario",
         "contrasena":"Contraseña",
-        "bottonInicioSesion":"Iniciar Sesión"
+        "bottonInicioSesion":"Iniciar Sesión",
+        "usuarioRequerido":"El campo usuario es requerido.",
+        "contrasenaRequerido":"El campo contraseña es requerido."
     }
 }
