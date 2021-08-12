@@ -1,6 +1,14 @@
 
 <div class="container-fluid login-container d-flex flex-wrap justify-content-center align-content-center">
     <div class="card w-25">
+        <div class="mt-4 mr-2 d-flex justify-content-end ">
+          <i class="fa fa-language d-flex flex-wrap align-content-center" aria-hidden="true"></i>
+          <select class="custom-select w-25" [(ngModel)]="selected">
+            <option value="en">En</option>
+            <option value="es">Es</option>
+          </select>
+      </div>
+
         <div class="mt-4 d-flex flex-column flex-wrap justify-content-center align-content-center">
             <i class="fas fa-user-circle fa-7x d-flex justify-content-center"></i> 
             <p>Inicia sesión con tu cuenta</p>
