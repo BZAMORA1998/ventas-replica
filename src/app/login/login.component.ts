@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 declare let $: any;
 
 @Component({
@@ -10,12 +11,20 @@ export class LoginComponent implements OnInit {
 
   usuario:String="";
   contrasena:String="";
-  selected:String='es';
   langArray:any;
 
-  constructor() { 
-    
+  public activeLang = 'es';
+  constructor(
+    private translate: TranslateService
+  ) {
+    this.translate.setDefaultLang(this.activeLang);
   }
+
+  public cambiarLenguaje() {
+    console.log(this.activeLang);
+    this.translate.use(this.activeLang);
+  }
+
 
   typeInputF="password";
    showPF:boolean=true;

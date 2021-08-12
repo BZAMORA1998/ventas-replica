@@ -1,0 +1,8 @@
+{
+    "login" : {
+        "iniciarSesion":"Inicia sesión con tu cuenta",
+        "usuario":"Usuario",
+        "contrasena":"Contraseña",
+        "bottonInicioSesion":"Iniciar Sesión"
+    }
+}

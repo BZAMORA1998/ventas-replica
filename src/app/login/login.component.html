@@ -3,7 +3,7 @@
     <div class="card w-25">
         <div class="mt-4 mr-2 d-flex justify-content-end ">
           <i class="fa fa-language d-flex flex-wrap align-content-center" aria-hidden="true"></i>
-          <select class="custom-select w-25" [(ngModel)]="selected">
+          <select class="custom-select w-25" [(ngModel)]="activeLang" (change)="cambiarLenguaje()">
             <option value="en">En</option>
             <option value="es">Es</option>
           </select>
@@ -11,25 +11,25 @@
 
         <div class="mt-4 d-flex flex-column flex-wrap justify-content-center align-content-center">
             <i class="fas fa-user-circle fa-7x d-flex justify-content-center"></i> 
-            <p>Inicia sesión con tu cuenta</p>
+            <p>{{'login.iniciarSesion' | translate}}</p>
         </div>
             
         <div class="card-body">
             <form>
                 <div class="form-group">
-                <label for="usuario" id="usuarioF" ><i class="fas fa-user-lock mr-2"></i> Usuario</label>
+                <label for="usuario" id="usuarioF" ><i class="fas fa-user-lock mr-2"></i>{{'login.usuario' | translate}}</label>
                 <input type="text" class="form-control mt-3" id="usuario" 
                 name="txt_usuario"  #txt_usuario="ngModel" [(ngModel)]="usuario" autofocus required>
                 </div>
                 <div class="form-group mt-5">
-                <label for="contrasena" id="contrasenaF"><i class="fas fa-key mr-2"></i> Contraseña</label>
+                <label for="contrasena" id="contrasenaF"><i class="fas fa-key mr-2"></i>{{'login.contrasena' | translate}}</label>
                 <input autocomplete="off" id="contrasena" class="form-control" [type]="typeInputF" type="password" name="txt_contrasena" #txt_contrasena="ngModel" [(ngModel)]="contrasena" required/>
                         <label *ngIf="showPF" (click)="mostrarPassword()" type="button" class="button"><i class="fai fa fa-eye showPass" aria-hidden="true"></i></label>
                         <label *ngIf="!showPF" (click)="mostrarPassword()" type="button" class="button"><i class="fai fa fa-eye-slash showPass" aria-hidden="true"></i></label>
 
                 </div>
             </form>
-            <button type="button" class="btn btn-primary w-100">Iniciar Sesión</button>
+            <button type="button" class="btn btn-primary w-100">{{'login.bottonInicioSesion' | translate}}</button>
         </div>
       </div>
 </div>
