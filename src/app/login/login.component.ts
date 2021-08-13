@@ -24,11 +24,12 @@ export class LoginComponent implements OnInit {
     private _auth: AuthService 
   ) {
     this._translate.setDefaultLang(this.activeLang);
+    localStorage.setItem("languaje",this.activeLang);
   }
 
   public cambiarLenguaje() {
-    console.log(this.activeLang);
     this._translate.use(this.activeLang);
+    localStorage.setItem("languaje",this.activeLang);
   }
 
 
@@ -87,7 +88,7 @@ export class LoginComponent implements OnInit {
    postAutenticacion(){
     this._sweetalert2Component.loading(true);
     this._auth.loginP(this.usuario,this.contrasena).subscribe(
-      (        Response: { [x: string]: any; })=>{
+      Response=>{
           this._sweetalert2Component.loading(false);
           if(Response['data'].esContrasenaPrimeraVez==null || Response['data'].esContrasenaPrimeraVez==false){
              this._router.navigate(['../home']);
@@ -96,7 +97,7 @@ export class LoginComponent implements OnInit {
           }
           localStorage.setItem("data",JSON.stringify(Response['data']));
         },
-      (error: { error: { message: any; }; })=>{
+      error=>{
           this._sweetalert2Component.showModalError(error.error.message);
         }
       );

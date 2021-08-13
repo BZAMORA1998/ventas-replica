@@ -26,15 +26,6 @@ export class UsuarioService {
       return this.apiService.ApiCallSpring("POST","/usuarios/crearUsuario",user,null);
     }
 
-    postRecuperarContrasena(correo):Observable<any>{
-
-      const objCorreo={
-        "correo":correo
-      }
-
-      return this.apiService.ApiCallSpringSinSeg("POST","/usuarios/recuperarContrasena",objCorreo,null);
-    }
-
     postCambiarContrasena(contrasenia):Observable<any>{
 
       const objcontrasenia={
@@ -55,19 +46,4 @@ export class UsuarioService {
     getUsuarioXId(idUsuario):Observable<any>{
       return this.apiService.ApiCallSpring("GET",`/usuarios/${idUsuario}/basica`,null,null);
     }
-
-    postPhoto(photo,idPersona):Observable<any>{
-      const data: FormData = new FormData();
-      data.append('idPersona',idPersona);
-      data.append('photo',photo);
-
-      var headers = new HttpHeaders();
-      headers.append('reportProgress',JSON.stringify(true));
-      headers.append('responseType','text');
-
-      return this.apiService.ApiCallMultiFormSpring("POST",`/usuarios/photo`,data,headers);
-  }
-
-
-
 }

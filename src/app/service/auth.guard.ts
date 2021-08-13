@@ -16,38 +16,7 @@ export class AuthGuard implements CanActivate {
               ){  
               }
 
-  rolesUsu=[];
-  rolesRut:any;
-  entro=false;
   canActivate(route: ActivatedRouteSnapshot):Observable<boolean>{
-
-        this.entro=false;
-        this._rolesService.getConsultarRolesPorRutas(route.url[0].path).subscribe(Response => {
-          this.rolesRut=Response['data'];
-        });
-
-
-        return  this._rolesService.getConsultarRolesPorUsuario().map(Response => {
-            this.rolesUsu=Response['data'];
-            if(this.auth.estaAutenticado()){
-              this.entro=false;
-              this.rolesUsu.forEach(a => {
-                this.rolesRut.forEach(b=> {
-                  if(a.secuenciaRol==b.secuenciaRol){
-                    this.entro=true;
-                  }
-                });
-              });
-            }
-
-            if(this.entro){
-              return this.entro;
-            }else{
-              localStorage.setItem("autenticado",JSON.stringify(false));
-              this.router.navigate(['../ventas/login']);
-              return false;
-            }
-          
-      });
+      return null;
   }
 }
