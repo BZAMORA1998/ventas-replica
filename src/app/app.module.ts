@@ -10,11 +10,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { UtilModule } from './util/util.module';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +27,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule ,
     MatSelectModule,
     BrowserAnimationsModule ,
+    UtilModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

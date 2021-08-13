@@ -31,7 +31,7 @@
                     <span class="text-danger d-flex justify-content-end" *ngIf="contrasena==''">{{'login.contrasenaRequerido' | translate}}</span>
                 </div>
             </form>
-            <button id="btn-ok" type="button" class="btn btn-primary w-100" disabled="true">{{'login.bottonInicioSesion' | translate}}</button>
+            <button (click)="postAutenticacion()" id="btn-ok" type="button" class="btn btn-primary w-100" disabled="true">{{'login.bottonInicioSesion' | translate}}</button>
         </div>
       </div>
 </div>
