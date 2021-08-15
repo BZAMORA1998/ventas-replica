@@ -8,7 +8,7 @@
         "contrasenaRequerido":"El campo contraseña es requerido."
     },
     "home":{
-        "principal":"Principal",
+        "modulos":"Módulos",
         "seguridad":"Seguridad",
         "usuarios":"Usuarios",
         "roles":"Roles",

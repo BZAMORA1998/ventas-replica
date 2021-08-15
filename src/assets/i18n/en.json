@@ -8,7 +8,7 @@
         "contrasenaRequerido":"The password field is required."
     },
     "home":{
-        "principal":"Principal",
+        "modulos":"Modules",
         "seguridad":"Security",
         "usuarios":"Users",
         "roles":"Roles",

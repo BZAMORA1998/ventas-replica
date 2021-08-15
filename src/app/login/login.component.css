@@ -1,9 +1,6 @@
 .login-container {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
     background: #43C6AC;
     background: -webkit-linear-gradient(to right, #191654, #43C6AC);
     background: linear-gradient(to right, #191654, #43C6AC);
@@ -36,22 +33,11 @@
 .custom-select{
     background-color: none !important;
     border: none !important;
-    outline: none !important;
-} 
-
-.custom-select{
-
-    background-color: none !important;
-    border: none !important;
     outline:none !important;
     outline-width: 0 !important;
     box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
-}
-
-#card-main{
-    display: none;
-}
+} 
 
 
