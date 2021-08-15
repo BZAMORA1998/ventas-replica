@@ -6,5 +6,12 @@
         "bottonInicioSesion":"Iniciar Sesión",
         "usuarioRequerido":"El campo usuario es requerido.",
         "contrasenaRequerido":"El campo contraseña es requerido."
+    },
+    "home":{
+        "principal":"Principal",
+        "seguridad":"Seguridad",
+        "usuarios":"Usuarios",
+        "roles":"Roles",
+        "cerrar_sesion":"Cerrar Sesión"
     }
 }

@@ -6,5 +6,12 @@
         "bottonInicioSesion":"Log in",
         "usuarioRequerido":"The user field is required.",
         "contrasenaRequerido":"The password field is required."
+    },
+    "home":{
+        "principal":"Principal",
+        "seguridad":"Security",
+        "usuarios":"Users",
+        "roles":"Roles",
+        "cerrar_sesion":"Sign off"
     }
 }
