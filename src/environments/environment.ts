@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrlSpring:"https://com-sistemas-api.herokuapp.com/ventas/v1",
+  apiUrlSpring:"https://sistemas-seguridad-api.herokuapp.com/ventas/v1",
   //apiUrlSpring:"http://localhost:8080/ventas/v1",
   languaje:"es"
 };

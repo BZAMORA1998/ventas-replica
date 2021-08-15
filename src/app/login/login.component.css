@@ -48,7 +48,10 @@
     box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
+}
 
+#card-main{
+    display: none;
 }
 
 

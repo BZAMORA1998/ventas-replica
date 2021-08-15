@@ -68,7 +68,7 @@ export class LoginComponent implements OnInit {
             $("#contrasenaF").css("margin-top",0);
             $("#contrasena").css("border-bottom","1px solid blue");
         }
-    });    
+    }); 
   }
 
   validaCamposVacios(){
