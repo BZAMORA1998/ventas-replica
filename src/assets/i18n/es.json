@@ -17,5 +17,6 @@
     "modulos":{
         "bienvenido1":"¡Bienvenido ",
         "bienvenido2":"! Este es el panel podrá encontrar atajos para acceder a los distintos listados de cada módulo del sistema."
+        ,"descripcionSeguridad":"En el módulo Seguridad se podra crear, actualizar y eliminar el usuario."
     }
 }

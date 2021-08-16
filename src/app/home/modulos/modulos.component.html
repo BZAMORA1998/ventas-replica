@@ -2,7 +2,7 @@
     <h1 class="w-100 text-start">{{'home.modulos' | translate}}</h1>
     <p class="d-block w-100">{{'modulos.bienvenido1' | translate}} Bryan! {{'modulos.bienvenido2' | translate}}</p>
     <div class="m-3 modulos" *ngFor="let modulo of modulos">
-        <div class="card">
+        <div class="card" routerLink="../seguridad">
             <div class="card-img-top text-center pt-3">
                 <h4 class="card-title bold">{{modulo.name}}</h4>
             </div>

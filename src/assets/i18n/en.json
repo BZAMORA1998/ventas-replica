@@ -17,6 +17,7 @@
     "modulos":{
         "bienvenido1":"¡Welcome ",
         "bienvenido2":"! This is the panel you will be able to find shortcuts to access the different lists of each module of the system."
+        ,"descripcionSeguridad":"En el módulo Seguridad se podrá crear, actualizar y eliminar el usuario."
 
     }
 }

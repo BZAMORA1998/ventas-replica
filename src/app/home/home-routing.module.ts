@@ -7,8 +7,8 @@ import { SeguridadComponent } from './seguridad/seguridad.component';
 const routes: Routes = [
   {
      path: '', component: HomeComponent, children: [
-      { 
-        path: 'seguridad',  component: SeguridadComponent 
+      {
+        path: 'seguridad',loadChildren:()=> import('./seguridad/seguridad.module').then(m => m.SeguridadModule)
       },
       { 
         path: 'modulos',  component: ModulosComponent 

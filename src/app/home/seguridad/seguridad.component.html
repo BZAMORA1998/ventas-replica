@@ -1,1 +1,13 @@
-<p>seguridad works!</p>
+<div class="d-flex mt-5 flex-wrap justify-content-around">
+    <h1 class="w-100 text-start">{{'home.seguridad' | translate}}</h1>
+    <p class="d-block w-100">{{'modulos.descripcionSeguridad' | translate}}</p>
+</div>
+<ul class="nav nav-tabs mt-3">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="./usuarios" routerLinkActive="active">Lista de usuarios</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="./crear-usuario" routerLinkActive="active">Crear usuario</a>
+    </li>
+  </ul>
+<router-outlet></router-outlet>
