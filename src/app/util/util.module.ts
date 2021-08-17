@@ -5,13 +5,15 @@ import {NgModule} from '@angular/core';
 import { PaginadorComponent } from './paginador/paginador.component';
 import { NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 import { TextComponent } from './text/text.component';
+import { SelectComponent } from './select/select.component';
 
 @NgModule({
   declarations: 
   [
     Sweetalert2Component,
     PaginadorComponent,
-    TextComponent
+    TextComponent,
+    SelectComponent
   ],
   imports: [
     CommonModule,
@@ -22,12 +24,14 @@ import { TextComponent } from './text/text.component';
   entryComponents:[
     Sweetalert2Component,
     PaginadorComponent,
-    TextComponent
+    TextComponent,
+    SelectComponent
   ],
   exports:[
     Sweetalert2Component,
     PaginadorComponent,
-    TextComponent
+    TextComponent,
+    SelectComponent
   ]
 })
 export class UtilModule { }

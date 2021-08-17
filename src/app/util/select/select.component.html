@@ -1,0 +1,17 @@
+
+<div class="form-group m-0">
+    <label class="position-absolute" id="select-text" >
+        <i class="{{icon}} mr-2"></i>{{label}}
+    </label>
+    <select class="custom-select border-red" name="select"
+        #select="ngModel"  [(ngModel)]="data.secuencia" 
+        ngControl="d.secuencia"
+        (change)="actualizarSelect(data.secuencia)">
+        <option selected value="">Seleccionar</option>
+        <option [value]="d.secuencia" *ngFor="let d of data" >{{d.nombre}}</option>
+    </select>        
+    <!-- <select class="custom-select" name="secuenciaGenero"  #secuenciaGenero="ngModel"  [(ngModel)]="data.secuencia" ngControl="d.secuencia">
+        <option selected>Seleccionar</option>
+        <option [value]="d.secuencia" *ngFor="let d of data" >{{d.nombre}}</option>
+    </select> -->
+</div>
