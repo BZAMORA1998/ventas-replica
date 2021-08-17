@@ -17,4 +17,8 @@ export class UsuariosComponent implements OnInit {
   getpaginacion(data){
 
   }
+
+  setUsuario(text){
+    console.log("data: "+text);
+  }
 }

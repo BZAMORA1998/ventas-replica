@@ -2,11 +2,13 @@
     <div class="row">
         <div class="col-11">
             <div class="d-flex justify-content-start mt-4">
-                <div class="m-2 form-group">
-                    <label for="formGroupExampleInput">Nº Identificación o Usuario</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                <div class="m-2 form-group  d-flex flex-wrap align-content-end">
+                    <app-text 
+                    [icon]="'fas fa-user-lock'" 
+                    [label]="'Nº Identificacion o usuario'"
+                    (texto)="setUsuario($event)"></app-text>    
                 </div>
-                <div class="m-2 form-group">
+                <div class="m-2 form-group d-flex flex-wrap align-content-end">
                 <label>Estado</label>
                 <select class="custom-select">
                     <option selected>Seleccionar</option>

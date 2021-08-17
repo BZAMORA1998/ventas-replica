@@ -1,0 +1,10 @@
+
+<div class="form-group m-0">
+    <label class="position-absolute" for="texto" id="textoF" >
+        <i class="{{icon}} mr-2"></i>{{label}}
+        </label>
+        <input autocomplete="nope" type="text" class="form-control mt-3" id="textoI" 
+        name="txt_texto" 
+         #txt_usuario="ngModel" 
+         [(ngModel)]="text" (change)="setText()" autofocus required>
+</div>

@@ -4,12 +4,14 @@ import { FormsModule} from '@angular/forms';
 import {NgModule} from '@angular/core';
 import { PaginadorComponent } from './paginador/paginador.component';
 import { NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
+import { TextComponent } from './text/text.component';
 
 @NgModule({
   declarations: 
   [
     Sweetalert2Component,
-    PaginadorComponent
+    PaginadorComponent,
+    TextComponent
   ],
   imports: [
     CommonModule,
@@ -19,11 +21,13 @@ import { NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   entryComponents:[
     Sweetalert2Component,
-    PaginadorComponent
+    PaginadorComponent,
+    TextComponent
   ],
   exports:[
     Sweetalert2Component,
-    PaginadorComponent
+    PaginadorComponent,
+    TextComponent
   ]
 })
 export class UtilModule { }
