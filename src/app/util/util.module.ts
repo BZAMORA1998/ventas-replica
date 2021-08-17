@@ -2,25 +2,28 @@ import { CommonModule } from '@angular/common';
 import { Sweetalert2Component } from './sweetalert2/sweetalert2.component';
 import { FormsModule} from '@angular/forms';
 import {NgModule} from '@angular/core';
-import {MatTableModule} from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
+import { PaginadorComponent } from './paginador/paginador.component';
+import { NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: 
   [
-    Sweetalert2Component
+    Sweetalert2Component,
+    PaginadorComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
-    MatPaginatorModule,
-    MatTableModule
+    NgbPaginationModule,    
+    NgbModule
   ],
   entryComponents:[
-    Sweetalert2Component
+    Sweetalert2Component,
+    PaginadorComponent
   ],
   exports:[
-    Sweetalert2Component
+    Sweetalert2Component,
+    PaginadorComponent
   ]
 })
 export class UtilModule { }

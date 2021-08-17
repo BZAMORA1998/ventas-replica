@@ -9,7 +9,12 @@ export class UsuariosComponent implements OnInit {
 
   constructor() { }
 
+  mostrarPag=true;
+  perPage=10;
+  totalRows=100;
   ngOnInit(): void {
   }
+  getpaginacion(data){
 
+  }
 }
