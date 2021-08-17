@@ -5,7 +5,9 @@
                 <app-text 
                 [icon]="'fas fa-user-lock'" 
                 [label]="'Nº Identificacion o usuario'"
-                (texto)="setUsuario($event)"></app-text>    
+                (textOut)="setUsuario($event)"
+                (textInt)="usuarios"
+                ></app-text>     
             </div>
             <div class="m-2 form-group d-flex flex-wrap align-content-end">
                 <app-select 
