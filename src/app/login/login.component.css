@@ -6,22 +6,7 @@
     background: linear-gradient(to right, #191654, #43C6AC);
 }
 
-.form-group>label{
-    position: absolute;
-    color: black !important;
-    margin-top: 0;
-    font-size: 13px;
-}
-
-.form-control{
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-radius: none;
-    border-bottom: 1px solid blue;
-}
-
-.fai{
+.eye{
     position: absolute;
     margin-left: 270px;
     margin-top: -30px;

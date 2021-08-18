@@ -11,8 +11,9 @@ export class TextComponent implements OnInit {
   constructor() { }
   @Input() label: string;
   @Input() icon: string;
-  @Input() id: number=0;
+  @Input() id: string="text";
   @Input() textInt:string="";
+  @Input() typeInput:string="text"
   @Output() textOut=new EventEmitter<string>();
   
   ngOnInit(): void {
