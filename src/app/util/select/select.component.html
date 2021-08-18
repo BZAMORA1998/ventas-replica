@@ -7,7 +7,7 @@
         #select="ngModel"  [(ngModel)]="data.id" 
         ngControl="d.id"
         (change)="actualizarSelect(data.id)">
-        <option selected>Seleccionar</option>
+        <option selected  [value]="0">Seleccionar</option>
         <option [value]="d.id" *ngFor="let d of data" >{{d.nombre}}</option>
     </select>        
 </div>
