@@ -4,10 +4,10 @@
         <i class="{{icon}} mr-2"></i>{{label}}
     </label>
     <select class="custom-select border-red" name="select"
-        #select="ngModel"  [(ngModel)]="data.id" 
+        #select="ngModel"  [(ngModel)]="selected" 
         ngControl="d.id"
-        (change)="actualizarSelect(data.id)">
-        <option selected  [value]="0">Seleccionar</option>
+        (change)="actualizarSelect()">
+        <option *ngIf="incluirSelect" selected value="undefined">{{'util.seleccionar' | translate}}</option>
         <option [value]="d.id" *ngFor="let d of data" >{{d.nombre}}</option>
     </select>        
 </div>

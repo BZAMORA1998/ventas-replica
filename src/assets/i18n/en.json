@@ -1,4 +1,7 @@
 {
+    "util":{
+        "seleccionar":"To select"
+    },
     "login" : {
         "iniciarSesion":"Login with your account",
         "usuario":"User",

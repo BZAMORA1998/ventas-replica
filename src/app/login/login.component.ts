@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
   }
 
   public cambiarLenguaje(activeLang) {
+    this.activeLang = activeLang;
     this._translate.use(activeLang);
     localStorage.setItem("languaje",activeLang);
   }

@@ -6,6 +6,9 @@ import { PaginadorComponent } from './paginador/paginador.component';
 import { NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 import { TextComponent } from './text/text.component';
 import { SelectComponent } from './select/select.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 @NgModule({
   declarations: 
@@ -19,7 +22,16 @@ import { SelectComponent } from './select/select.component';
     CommonModule,
     FormsModule,
     NgbPaginationModule,    
-    NgbModule
+    NgbModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (http: HttpClient) => {
+          return new TranslateHttpLoader(http);
+        },
+        deps: [ HttpClient ]
+      }
+    })  
   ],
   entryComponents:[
     Sweetalert2Component,
