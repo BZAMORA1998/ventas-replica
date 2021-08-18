@@ -27,10 +27,21 @@ export class LoginComponent implements OnInit {
     localStorage.setItem("languaje",this.activeLang);
   }
 
-  public cambiarLenguaje() {
-    this._translate.use(this.activeLang);
-    localStorage.setItem("languaje",this.activeLang);
+  public cambiarLenguaje(activeLang) {
+    this._translate.use(activeLang);
+    localStorage.setItem("languaje",activeLang);
   }
+
+  data:any=[
+    {
+    "id":"en",
+    "nombre":"En"
+    },
+    {
+      "id":"es",
+      "nombre":"Es"
+    }
+  ];
 
 
   typeInputF="password";

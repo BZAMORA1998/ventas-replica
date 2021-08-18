@@ -5,7 +5,8 @@
         "contrasena":"Contraseña",
         "bottonInicioSesion":"Iniciar Sesión",
         "usuarioRequerido":"El campo usuario es requerido.",
-        "contrasenaRequerido":"El campo contraseña es requerido."
+        "contrasenaRequerido":"El campo contraseña es requerido.",
+        "lenguaje":"Lenguaje"
     },
     "home":{
         "modulos":"Módulos",

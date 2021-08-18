@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 declare let $: any;
 
 @Component({
@@ -10,6 +10,8 @@ export class SelectComponent implements OnInit {
 
   @Input() label: string;
   @Input() icon: string;
+  @Input() data:any;
+  @Output() id=new EventEmitter<any>();
   
   constructor() { }
 
@@ -17,7 +19,7 @@ export class SelectComponent implements OnInit {
   }
 
   actualizarSelect(secuencia){
-    console.log(secuencia);
+    this.id.emit(secuencia);
     if(secuencia==0){
       $("select").removeClass("border-blue");
       $("select").addClass("border-red");
@@ -26,22 +28,5 @@ export class SelectComponent implements OnInit {
       $("select").addClass("border-blue");
     }
   }
-
-  data:any=[
-    {
-    "secuencia":1,
-    "nombre":"Todos"
-    },
-    {
-      "secuencia":2,
-      "nombre":"Activos"
-    },
-    {
-      "secuencia":3,
-      "nombre":"Inactivos"
-    }
-  ];
-
-  
 
 }

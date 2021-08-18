@@ -4,14 +4,10 @@
         <i class="{{icon}} mr-2"></i>{{label}}
     </label>
     <select class="custom-select border-red" name="select"
-        #select="ngModel"  [(ngModel)]="data.secuencia" 
-        ngControl="d.secuencia"
-        (change)="actualizarSelect(data.secuencia)">
-        <option selected value="">Seleccionar</option>
-        <option [value]="d.secuencia" *ngFor="let d of data" >{{d.nombre}}</option>
-    </select>        
-    <!-- <select class="custom-select" name="secuenciaGenero"  #secuenciaGenero="ngModel"  [(ngModel)]="data.secuencia" ngControl="d.secuencia">
+        #select="ngModel"  [(ngModel)]="data.id" 
+        ngControl="d.id"
+        (change)="actualizarSelect(data.id)">
         <option selected>Seleccionar</option>
-        <option [value]="d.secuencia" *ngFor="let d of data" >{{d.nombre}}</option>
-    </select> -->
+        <option [value]="d.id" *ngFor="let d of data" >{{d.nombre}}</option>
+    </select>        
 </div>

@@ -1,12 +1,13 @@
 
 <div class="container-fluid login-container d-flex flex-wrap justify-content-center align-content-center">
     <div class="card w-25">
-        <div class="mt-4 mr-2 d-flex justify-content-end ">
-          <i class="fa fa-language d-flex flex-wrap align-content-center" aria-hidden="true"></i>
-          <select class="custom-select w-25" [(ngModel)]="activeLang" (change)="cambiarLenguaje()">
-            <option value="en">En</option>
-            <option value="es">Es</option>
-          </select>
+        <div class="mt-5 mr-4 d-flex justify-content-end ">
+          <app-select class="w-25"
+          [icon]="'fa fa-language'" 
+          [label]="'login.lenguaje' | translate"
+          [data]="data"
+          (id)="cambiarLenguaje($event)"
+          ></app-select>      
       </div>
 
         <div class="mt-4 d-flex flex-column flex-wrap justify-content-center align-content-center">

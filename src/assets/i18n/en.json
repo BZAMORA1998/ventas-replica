@@ -5,7 +5,8 @@
         "contrasena":"Password",
         "bottonInicioSesion":"Log in",
         "usuarioRequerido":"The user field is required.",
-        "contrasenaRequerido":"The password field is required."
+        "contrasenaRequerido":"The password field is required.",
+        "lenguaje":"Language"
     },
     "home":{
         "modulos":"Modules",
