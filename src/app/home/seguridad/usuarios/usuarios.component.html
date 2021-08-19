@@ -4,16 +4,10 @@
             <div class="m-2 form-group  d-flex flex-wrap align-content-end">
                 <app-text 
                 [icon]="'fas fa-user-lock'" 
-                [label]="'Nº Identificacion o usuario'"
+                [label]="'seguridad.usuarios.identificacionUsuario' | translate"
                 (textOut)="setUsuario($event)"
                 ></app-text>     
             </div>
-            <!-- <div class="m-2 form-group d-flex flex-wrap align-content-end">
-                <app-select 
-                [icon]="'fas fa-user-lock'" 
-                [label]="'Estado'"
-                ></app-select>      
-            </div> -->
             <div class="m-2 form-group d-flex flex-wrap align-content-end">
                 <button type="button" class="btn btn-primary">Primary</button>
             </div>
@@ -22,11 +16,11 @@
             <table class="table">
                 <thead>
                 <tr>
-                    <th>Nº Identificación</th>
-                    <th>Primer Nombre</th>
-                    <th>Primer Apellido</th>
-                    <th>Usuario</th>
-                    <th>Acción</th>
+                    <th>{{'seguridad.usuarios.identificacion' | translate}}</th>
+                    <th>{{'seguridad.usuarios.primerNombre' | translate}}</th>
+                    <th>{{'seguridad.usuarios.primerApellido' | translate}}</th>
+                    <th>{{'seguridad.usuarios.usuario' | translate}}</th>
+                    <th>{{'seguridad.usuarios.accion' | translate}}</th>
                 </tr>
                 </thead>
                 <tbody>

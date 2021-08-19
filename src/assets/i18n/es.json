@@ -16,11 +16,24 @@
         "seguridad":"Seguridad",
         "usuarios":"Usuarios",
         "roles":"Roles",
-        "cerrar_sesion":"Cerrar Sesión"
+        "cerrar_sesion":"Cerrar Sesión",
+        "lista_usuario":"Lista de usuarios",
+        "crear_usuario":"Crear usuario"
     },
     "modulos":{
         "bienvenido1":"¡Bienvenido ",
         "bienvenido2":"! Este es el panel podrá encontrar atajos para acceder a los distintos listados de cada módulo del sistema."
         ,"descripcionSeguridad":"En el módulo Seguridad se podra crear, actualizar y eliminar el usuario."
+    },
+    "seguridad":{
+        "usuarios":{
+            "identificacion":"Nº Identificación",
+            "primerNombre":"Primer nombre",
+            "primerApellido":"Primer Apellido",
+            "usuario":"Usuario",
+            "accion":"Acción",
+            "estado":"Estado",
+            "identificacionUsuario":"Nº Identificacion o usuario"
+        }
     }
 }

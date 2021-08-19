@@ -16,12 +16,25 @@
         "seguridad":"Security",
         "usuarios":"Users",
         "roles":"Roles",
-        "cerrar_sesion":"Sign off"
+        "cerrar_sesion":"Sign off",
+        "lista_usuario":"User List",
+        "crear_usuario":"Create user"
     },
     "modulos":{
         "bienvenido1":"¡Welcome ",
         "bienvenido2":"! This is the panel you will be able to find shortcuts to access the different lists of each module of the system."
-        ,"descripcionSeguridad":"En el módulo Seguridad se podrá crear, actualizar y eliminar el usuario."
+        ,"descripcionSeguridad":"In the Security module you can create, update and delete the user."
 
+    },
+    "seguridad":{
+        "usuarios":{
+            "identificacion":"Nº Identification",
+            "primerNombre":"First name",
+            "primerApellido":"Surname",
+            "usuario":"User",
+            "accion":"Action",
+            "estado":"State",
+            "identificacionUsuario":"Nº Identification or user"
+        }
     }
 }
