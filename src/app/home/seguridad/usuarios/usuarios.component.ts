@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-usuarios',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsuariosComponent implements OnInit {
 
-  constructor() { }
+  public activeLang = 'es';
+  constructor(private _translate: TranslateService) 
+  {
+    this.activeLang=localStorage.getItem("languaje");
+    this._translate.setDefaultLang(this.activeLang);
+  }
 
   mostrarPag=true;
   perPage=10;

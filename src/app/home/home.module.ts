@@ -7,8 +7,6 @@ import { ModulosComponent } from './modulos/modulos.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { UtilModule } from '../util/util.module';
-
 
 @NgModule({
   declarations: [SeguridadComponent, ModulosComponent],
