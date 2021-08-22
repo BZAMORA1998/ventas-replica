@@ -14,6 +14,7 @@ declare var $:any;
 })
 export class UsuariosCAComponent implements OnInit {
   @Output () valueResponse: EventEmitter<any> = new EventEmitter();
+  @Input () esCreacion:any=true;
 
   crearOActualizarUsuario(){
     this.valueResponse.emit(this.data);
@@ -28,7 +29,7 @@ export class UsuariosCAComponent implements OnInit {
     this.translate.setDefaultLang(environment.languaje);
    }
    consultarUsuarioDisponible(){
-     if(this.data.primerNombre.length>0 && this.data.primerApellido.length>0)
+     if(this.data.primerNombre.length>0 && this.data.primerApellido.length>0 && this.esCreacion==true)
         this.getConsultarUsuarioDisponible();
    }
 
