@@ -34,7 +34,8 @@
             "usuario":"User",
             "accion":"Action",
             "estado":"State",
-            "identificacionUsuario":"Nº Identification or user"
+            "identificacionUsuario":"Nº Identification or user",
+            "nombresCompletos":"Complete Names"
         }
     }
 }

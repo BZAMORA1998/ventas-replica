@@ -28,12 +28,13 @@
     "seguridad":{
         "usuarios":{
             "identificacion":"Nº Identificación",
-            "primerNombre":"Primer nombre",
+            "primerNombre":"Primer Nombre",
             "primerApellido":"Primer Apellido",
             "usuario":"Usuario",
             "accion":"Acción",
             "estado":"Estado",
-            "identificacionUsuario":"Nº Identificacion o usuario"
+            "identificacionUsuario":"Nº Identificación o usuario",
+            "nombresCompletos":"Nombres Completos"
         }
     }
 }

@@ -27,6 +27,7 @@
     "jquery": "^3.6.0",
     "jquery-ui-dist": "^1.12.1",
     "ng-bootstrap-pagination": "^0.2.3",
+    "ngx-skeleton-loader": "^4.0.0",
     "rxjs": "~6.6.0",
     "rxjs-compat": "^6.6.7",
     "sweetalert2": "^11.1.2",

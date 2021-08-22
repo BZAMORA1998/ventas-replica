@@ -12,10 +12,10 @@ export class PaginadorComponent implements OnInit {
 
 
 
-    @Input() totalDatos: number;
-    @Input() datosPorpagina: number;
+    @Input() totalDatos: Number;
+    @Input() datosPorpagina: Number;
 
-    @Output() paginaSeleccionada:EventEmitter<number>;
+    @Output() paginaSeleccionada:EventEmitter<Number>;
 
   constructor() { 
     this.paginaSeleccionada = new EventEmitter();
