@@ -12,7 +12,7 @@ export class CrearUsuarioComponent implements OnInit {
   constructor( private _usuarioService:UsuarioService,
     private sweetalert2Component:Sweetalert2Component) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
   }
 
    /**
@@ -25,7 +25,7 @@ export class CrearUsuarioComponent implements OnInit {
       this._usuarioService.postCrearUsuario(data).subscribe(
         Response=>{
           this.sweetalert2Component.loading(false);
-          this.sweetalert2Component.showModalConfirmacion(Response.message,"../ventas/home/seguridad/usuarios/listar-usuarios");
+          this.sweetalert2Component.showModalConfirmacion(Response.message,"../home/seguridad/usuarios/usuarios");
         },
         error=>{
           this.sweetalert2Component.loading(false);

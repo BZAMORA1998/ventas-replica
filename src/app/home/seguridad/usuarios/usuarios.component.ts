@@ -11,8 +11,8 @@ import Swal from 'sweetalert2';
 })
 export class UsuariosComponent implements OnInit {
 
-  setUsuario(text){
-    console.log("data: "+text);
+  setUsuario(usuario){
+    this.valor=usuario;
   }
 
   public activeLang = 'es';
@@ -68,7 +68,7 @@ export class UsuariosComponent implements OnInit {
       ); 
   }
 
-  dataUsuarioId=[];
+  dataUsuarioId:any;
   getUsuarioXId(idUsuario){
     this._usuarioService.getUsuarioXId(idUsuario).subscribe(
       Response=>{
