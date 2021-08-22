@@ -26,6 +26,7 @@
     "@ngx-translate/http-loader": "^6.0.0",
     "jquery": "^3.6.0",
     "jquery-ui-dist": "^1.12.1",
+    "material-tooltip": "^1.0.1",
     "ng-bootstrap-pagination": "^0.2.3",
     "ngx-skeleton-loader": "^4.0.0",
     "rxjs": "~6.6.0",

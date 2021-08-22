@@ -10,7 +10,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { UsuariosCAComponent } from './usuarios-ca/usuarios-ca.component';
 import { FormsModule } from '@angular/forms';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
-
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [UsuariosComponent, CrearUsuarioComponent,UsuariosCAComponent],
@@ -20,6 +20,7 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
     UtilModule,
     FormsModule,
     NgxSkeletonLoaderModule.forRoot(),
+    MatTooltipModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

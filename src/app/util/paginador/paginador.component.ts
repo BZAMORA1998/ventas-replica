@@ -7,13 +7,13 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class PaginadorComponent implements OnInit {
 
-    page:number = 1;
-    totalPaginas:number;
+    page= 1;
+    totalPaginas;
 
 
 
-    @Input() totalDatos: Number;
-    @Input() datosPorpagina: Number;
+    @Input() totalDatos;
+    @Input() datosPorpagina;
 
     @Output() paginaSeleccionada:EventEmitter<Number>;
 

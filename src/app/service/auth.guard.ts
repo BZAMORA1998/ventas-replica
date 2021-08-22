@@ -10,8 +10,7 @@ import "rxjs/add/operator/map";
 export class AuthGuard implements CanActivate {
   autenticado;
   constructor(private auth: AuthService,
-              private router:Router,
-              private _rolesService:RolesService
+              private router:Router
               ){  
               }
 

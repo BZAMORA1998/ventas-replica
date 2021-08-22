@@ -31,6 +31,27 @@ export class UsuariosComponent implements OnInit {
     this.listarUsuario();
   }
 
+  setEstado(estado){
+    console.log("estado: "+estado);
+    this.estado=estado;
+  }
+
+  dataEstado:any=[
+    {
+    "id":"TODOS",
+    "nombre":"Todos"
+    },
+    {
+      "id":"ACTIVO",
+      "nombre":"Activo"
+    },
+    {
+      "id":"INACTIVO",
+      "nombre":"Inactivo"
+      },
+  ];
+
+
   actualizarUsuario(data){
       this.sweetalert2Component.loading(true);
       this._usuarioService.putActualizarUsuario(data).subscribe(
@@ -79,7 +100,6 @@ public mostrarPag:Boolean=false;
 public valor:String="";
 public estado:String="TODOS";
 estadoUsuario(){
-  console.log(this.estado);
   this.listarUsuario();
 }
 
