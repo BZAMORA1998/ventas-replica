@@ -7,4 +7,9 @@ input:focus, select:focus, select, input.form-control:focus {
 
 }
 
-.container-fluid,html, body { height: 100%;margin: 0;padding: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.container-fluid,html, body {height: 100%;margin: 0;padding: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.cursor-pointer{
+    cursor: pointer;
+}
+

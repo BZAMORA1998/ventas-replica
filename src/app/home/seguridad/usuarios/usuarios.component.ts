@@ -141,7 +141,7 @@ listarUsuario(){
 activarOInactivarUsuario(secuenciaUsuario){
   this._usuarioService.putActivarOInactivarUsuario(secuenciaUsuario).subscribe(
     Response=>{
-      this.listarUsuario();
+      
     },
     error=>{
       console.log(error.error.message);

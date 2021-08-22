@@ -1,5 +1,6 @@
 export const environment = {
   production: true,
-  apiUrlSpring:"https://com-sistemas-api.herokuapp.com/ventas/v1",
+  apiUrlSpring:"https://sistemas-seguridad-api.herokuapp.com/ventas/v1",
+  apiUrlNodeJS:"https://sistema-general-api.herokuapp.com",
   languaje:"es"
 };

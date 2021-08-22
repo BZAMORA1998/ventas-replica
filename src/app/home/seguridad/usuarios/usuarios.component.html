@@ -20,7 +20,7 @@
                 ></app-select>   
             </div>
             <div class="m-2 form-group d-flex flex-wrap align-content-end">
-                <a (click)="listarUsuario()"matTooltip="Buscar"><img width="40" height="40" src="../../../../assets/img/magnifying-glass.png"></a>
+                <a class="cursor-pointer" (click)="listarUsuario()"matTooltip="Buscar"><img width="40" height="40" src="../../../../assets/img/magnifying-glass.png"></a>
             </div>
         </div>
         <div class="d-flex flex-column justify-content-start mt-4">
@@ -65,13 +65,17 @@
                                 <td >{{d.nombresCompletos | titlecase}}</td>
                                 <td >{{d.usuario}}</td>
                                 <td >
-                                    <div *ngIf="d.estado; else elseEstado">Activo</div>
-                                    <ng-template #elseEstado>Inactivo</ng-template>
+                                    <div class="custom-control custom-switch">
+                                        <input [disabled]="d.usuario=='BZAMORA'" (change)="activarOInactivarUsuario(d.secuenciaUsuario)"
+                                         type="checkbox" 
+                                        name="estado"  #estado="ngModel"  [(ngModel)]="d.estado"  class="custom-control-input" id="customSwitch-{{i}}">
+                                        <label  class="cursor-pointer" matTooltip="{{d.estado ? 'Inactivar Usuario' : 'Activar Usuario'}}"  class="custom-control-label" for="customSwitch-{{i}}"></label>
+                                      </div>
                                 </td>
                                 <td >
-                                    <img matTooltip="Actualizar usuario" (click)="getUsuarioXId(d.secuenciaUsuario)" src="../../../../../../assets/img/update-profile-user.svg" width="25" height="25"
+                                    <img class="cursor-pointer" matTooltip="Actualizar usuario" (click)="getUsuarioXId(d.secuenciaUsuario)" src="../../../../../../assets/img/update-profile-user.svg" width="25" height="25"
                                     data-toggle="modal" data-target="#actualizarUsuario">
-                                    <img matTooltip="Eliminar usuario" src="../../../../../../assets/img/eliminar.svg" width="25" height="25"
+                                    <img class="cursor-pointer"  matTooltip="Eliminar usuario" src="../../../../../../assets/img/eliminar.svg" width="25" height="25"
                                      data-toggle="modal" (click)="deleteEliminarUsuario(d.secuenciaUsuario,d.usuario)">
                                 </td>
                               </tr>
@@ -93,12 +97,11 @@
     <div class="modal-dialog modal-dialog-scrollable" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5>Actualizar Usuario</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body p-5">
           <app-usuarios-ca (valueResponse)="actualizarUsuario($event)" [data]="dataUsuarioId"></app-usuarios-ca>
         </div>
         <div class="modal-footer">
