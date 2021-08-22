@@ -68,7 +68,27 @@ export class UsuariosComponent implements OnInit {
       ); 
   }
 
-  dataUsuarioId:any;
+  dataUsuarioId=
+  {
+    secuenciaUsuario:0,
+    primerNombre:"",
+    primerApellido:"",
+    segundoNombre:"",
+    segundoApellido:"",
+    secuenciaTipoIdentificacion:0,
+    secuenciaGenero:0,
+    fechaNacimiento:"",
+    usuario:"",
+    numeroIdentificacion:"",
+    secuenciaPais:0,
+    secuenciaProvincia:0,
+    secuenciaCiudad:0,
+    email:"",
+    edad:"",
+    telefonoMovil:"",
+    telefonoFijo:"",
+    direccion:""
+};
   getUsuarioXId(idUsuario){
     this._usuarioService.getUsuarioXId(idUsuario).subscribe(
       Response=>{

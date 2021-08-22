@@ -34,7 +34,9 @@ export class UsuariosCAComponent implements OnInit {
    }
 
    ngOnChanges(){
-    if(this.data.secuenciaPais!=null && this.data.secuenciaPais!=0){
+    if(this.data.secuenciaPais!=undefined 
+      && this.data.secuenciaPais!=null 
+      && this.data.secuenciaPais!=0){
       this.getProvincia();
     }
 
