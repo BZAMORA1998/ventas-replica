@@ -36,6 +36,10 @@ export class UsuariosCAComponent implements OnInit {
     if(this.data.secuenciaPais!=null && this.data.secuenciaPais!=0){
       this.getProvincia();
     }
+
+    if(this.data.fechaNacimiento!=null){
+      this.consultarEdad();
+    }
    }
 
    /**
