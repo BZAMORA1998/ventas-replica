@@ -28,13 +28,11 @@ export class TextComponent implements OnInit {
     this.textOut.emit(this.textInt);
   }
   onFocusEvent(){
-    console.log("Entro");
       $(`#textoF-${this.id}`).css("margin-top",-20);
       $(`#textoI-${this.id}`).css("border-bottom","1px solid blue");
       $(`#textoF-${this.id}`).css("font-size","12px");
   }
   onFocusOutEvent(){
-    console.log("salio");
     if(this.textInt==null || this.textInt==""){
       $(`#textoF-${this.id}`).css("margin-top",0);
       $(`#textoI-${this.id}`).css("border-bottom","1px solid red");

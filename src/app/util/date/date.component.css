@@ -1,0 +1,12 @@
+.form-control{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: none;
+    border-bottom: 1px solid blue;
+}
+
+.input-date{
+    margin-top: -20px;
+    font-size: 13px;
+}

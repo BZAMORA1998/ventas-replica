@@ -175,6 +175,10 @@ export class UsuariosCAComponent implements OnInit {
     this.data.secuenciaGenero=secuenciaGenero;
   }
 
+  setFechaNacimiento(fechaNacimiento){
+    this.data.fechaNacimiento=fechaNacimiento;
+  }
+
 
   
   public tipoIdentificacion:any=[

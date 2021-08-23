@@ -1,0 +1,11 @@
+<div class="form-group m-0">
+    <label class="position-absolute input-date" for="date" id="dateF-{{id}}" >
+        <i class="{{icon}} mr-2"></i>{{label}}
+        </label>
+        <input autocomplete="nope" type="date" class="form-control mt-3" id="dateI-{{id}}" 
+        name="date" 
+         #date="ngModel" 
+         [(ngModel)]="dateInt" autofocus 
+         (change)="actualizarDate"
+         required>  
+</div>

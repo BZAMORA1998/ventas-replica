@@ -70,9 +70,9 @@
                 </div>
                 <div class="col-sm-3 col-6">
                     <div class="form-group">
-                        <label>Fecha de nacimiento</label>
-                        <input type="date" class="form-control" placeholder="Fecha de nacimiento" name="fechaNacimiento"
-                            #fechaNacimiento="ngModel" [(ngModel)]="data.fechaNacimiento" (change)="consultarEdad()">
+                        <app-date [icon]="'fas fa-user-lock'" [label]="'Fecha de nacimiento'"
+                        (dateOut)="setFechaNacimiento($event)" [dateInt]="data.fechaNacimiento"
+                        [id]="'fechaNacimiento'"></app-date>
                     </div>
                 </div>
 

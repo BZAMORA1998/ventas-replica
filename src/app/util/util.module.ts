@@ -9,6 +9,7 @@ import { SelectComponent } from './select/select.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { DateComponent } from './date/date.component';
 
 @NgModule({
   declarations: 
@@ -16,7 +17,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     Sweetalert2Component,
     PaginadorComponent,
     TextComponent,
-    SelectComponent
+    SelectComponent,
+    DateComponent
   ],
   imports: [
     CommonModule,
@@ -37,13 +39,15 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     Sweetalert2Component,
     PaginadorComponent,
     TextComponent,
-    SelectComponent
+    SelectComponent,
+    DateComponent
   ],
   exports:[
     Sweetalert2Component,
     PaginadorComponent,
     TextComponent,
-    SelectComponent
+    SelectComponent,
+    DateComponent
   ]
 })
 export class UtilModule { }
