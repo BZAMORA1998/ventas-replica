@@ -22,6 +22,7 @@ export class SelectComponent implements OnInit {
 
   actualizarSelect(){
     this.id.emit(this.selected);
+    console.log("Id: ",this.selected);
     if(this.selected==undefined){
       $("select").removeClass("border-blue");
       $("select").addClass("border-red");

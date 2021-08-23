@@ -17,7 +17,11 @@ export class TextComponent implements OnInit {
   @Output() textOut=new EventEmitter<string>();
   
   ngOnInit(): void {
+  }
 
+  ngOnChanges(){
+    this.onFocusEvent();
+    this.onFocusOutEvent();
   }
 
   setText() {
@@ -31,7 +35,7 @@ export class TextComponent implements OnInit {
   }
   onFocusOutEvent(){
     console.log("salio");
-    if(this.textInt==""){
+    if(this.textInt==null || this.textInt==""){
       $(`#textoF-${this.id}`).css("margin-top",0);
       $(`#textoI-${this.id}`).css("border-bottom","1px solid red");
       $(`#textoF-${this.id}`).css("font-size","13px");

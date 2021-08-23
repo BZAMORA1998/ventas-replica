@@ -152,6 +152,29 @@ export class UsuariosCAComponent implements OnInit {
     this.data.telefonoMovil=telefonoMovil;
   }
 
+  setSecuenciaPais(secuenciaPais){
+    console.log(secuenciaPais);
+    this.data.secuenciaPais=secuenciaPais;
+    this.getProvincia();
+  }
+
+  setSecuenciaProvincia(secuenciaProvincia){
+    this.data.secuenciaProvincia=secuenciaProvincia;
+    this.getCiudad();
+  }
+
+  setSecuenciaCiudad(secuenciaCiudad){
+    this.data.secuenciaCiudad=secuenciaCiudad;
+  }
+
+  setSecuenciaTipoIdentificacion(secuenciaTipoIdentificacion){
+    this.data.secuenciaTipoIdentificacion=secuenciaTipoIdentificacion;
+  }
+
+  setSecuenciaGenero(secuenciaGenero){
+    this.data.secuenciaGenero=secuenciaGenero;
+  }
+
 
   
   public tipoIdentificacion:any=[
@@ -177,6 +200,10 @@ export class UsuariosCAComponent implements OnInit {
     this._generalService.getTipoIdentificacion().subscribe(
         Response=>{
           this.tipoIdentificacion=Response.data;
+
+          this.tipoIdentificacion.forEach(function(e) {
+            e.id=e.secuenciaTipoIdentificacion;
+          });
         },
         error=>{
           console.log(error.error.message);
@@ -195,10 +222,12 @@ export class UsuariosCAComponent implements OnInit {
 
             this.genero.forEach(element => {
               if(element.nombre=='M'){
-                element.descripcionGenero="Masculino";
+                element.nombre="Masculino";
               }else{
-                element.descripcionGenero="Femenino";
+                element.nombre="Femenino";
               }
+
+              element.id=element.secuenciaGenero;
             });
           },
           error=>{
@@ -218,6 +247,11 @@ export class UsuariosCAComponent implements OnInit {
       this._generalService.getPais().subscribe(
           Response=>{
             this.pais=Response.data;
+
+            this.pais.forEach(function(e) {
+              e.id=e.secuenciaPais;
+            });
+
           },
           error=>{
             console.log(error.error.message);
@@ -234,6 +268,9 @@ export class UsuariosCAComponent implements OnInit {
       this._generalService.getProvincia(this.data.secuenciaPais).subscribe(
           Response=>{
             this.provincia=Response.data;
+            this.provincia.forEach(function(e) {
+              e.id=e.secuenciaProvincia;
+            });
             this.getCiudad();
           },
           error=>{
@@ -251,6 +288,9 @@ export class UsuariosCAComponent implements OnInit {
       this._generalService.getCiudad(this.data.secuenciaPais,this.data.secuenciaProvincia).subscribe(
           Response=>{
             this.ciudad=Response.data;
+            this.ciudad.forEach(function(e) {
+              e.id=e.secuenciaCiudad;
+            });
           },
           error=>{
             console.log(error.error.message);
