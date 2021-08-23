@@ -111,9 +111,49 @@ export class UsuariosCAComponent implements OnInit {
     this.getPais();
   }
 
-  secuenciaPais=0;
-  secuenciaProvincia=0;
+  setNumeroIdentificacion(numeroIdentificacion){
+    this.data.numeroIdentificacion=numeroIdentificacion;
+  }
+  setPrimerNombre(primerNombre){
+    this.data.primerNombre=primerNombre;
+  }
+  setSegundoNombre(segundoNombre){
+    this.data.segundoNombre=segundoNombre;
+  }
+  setPrimerApellido(primerApellido){
+    this.data.primerApellido=primerApellido;
+  }
 
+  setSegundoApellido(segundoApellido){
+    this.data.segundoApellido=segundoApellido;
+  }
+
+  setEmail(email){
+    this.data.email=email;
+  }
+
+  setUsuario(usuario){
+    this.data.usuario=usuario;
+  }
+
+  setEdad(edad){
+    this.data.edad=edad;
+  }
+
+  setDireccion(direccion){
+    this.data.direccion=direccion;
+  }
+
+  setTelefonoFijo(telefonoFijo){
+    this.data.telefonoFijo=telefonoFijo;
+  }
+
+  setTelefonoMovil(telefonoMovil){
+    this.data.telefonoMovil=telefonoMovil;
+  }
+
+
+  
   public tipoIdentificacion:any=[
                     {
                       secuenciaTipoIdentificacion:0,
@@ -172,6 +212,8 @@ export class UsuariosCAComponent implements OnInit {
      * @description Consulta el pais
      */
      pais=[];
+     secuenciaPais=0;
+     secuenciaProvincia=0;
     getPais(){
       this._generalService.getPais().subscribe(
           Response=>{

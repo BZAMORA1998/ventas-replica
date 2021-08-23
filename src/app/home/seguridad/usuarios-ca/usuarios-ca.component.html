@@ -1,4 +1,3 @@
-
 <div class="row">
     <div class="card col-12">
         <h2 class="card-title p-4">Datos Personales</h2>
@@ -6,83 +5,88 @@
             <div class="row">
                 <div class="col-sm-3 col-6 w-100">
                     <div class="form-group text-center pt-4">
-                        <img  width="90" height="90" src="assets/img/Avatar_Male_4.png" for="foto"/>
+                        <img width="90" height="90" src="assets/img/Avatar_Male_4.png" for="foto" />
                         <label for="foto">Foto</label>
                     </div>
                 </div>
                 <div class="col-sm-3 col-6 align-self-end">
                     <div class="form-group">
                         <label>Tipo de Identificación</label>
-                        <select class="custom-select" name="secuenciaTipoIdentificacion"  #secuenciaTipoIdentificacion="ngModel"  [(ngModel)]="data.secuenciaTipoIdentificacion" ngControl="t.secuenciaTipoIdentificacion">
+                        <select class="custom-select" name="secuenciaTipoIdentificacion"
+                            #secuenciaTipoIdentificacion="ngModel" [(ngModel)]="data.secuenciaTipoIdentificacion"
+                            ngControl="t.secuenciaTipoIdentificacion">
                             <option selected>Seleccionar</option>
-                            <option [value]="t.secuenciaTipoIdentificacion" *ngFor="let t of tipoIdentificacion" >{{t.nombre}}</option>
-                            </select>
+                            <option [value]="t.secuenciaTipoIdentificacion" *ngFor="let t of tipoIdentificacion">
+                                {{t.nombre}}</option>
+                        </select>
                     </div>
                 </div>
                 <div class="col-sm-3 col-6 align-self-end">
                     <div class="form-group">
-                        <label>Número de Identificación</label>
-                        <input type="text" class="form-control" placeholder="0999999999"
-                        name="numeroIdentificacion"  #numeroIdentificacion="ngModel"  [(ngModel)]="data.numeroIdentificacion">
+                        <app-text [icon]="'fas fa-user-lock'" [label]="'Número de Identificación'"
+                            (textOut)="setNumeroIdentificacion($event)" [textInt]="data.numeroIdentificacion"
+                            [id]="'numeroIdentificacion'"></app-text>
                     </div>
                 </div>
                 <div class="col-sm-3 col-6  align-self-end">
                     <div class="form-group">
                         <label>Sexo</label>
-                        <select class="custom-select" name="secuenciaGenero"  #secuenciaGenero="ngModel"  [(ngModel)]="data.secuenciaGenero" ngControl="g.secuenciaGenero">
+                        <select class="custom-select" name="secuenciaGenero" #secuenciaGenero="ngModel"
+                            [(ngModel)]="data.secuenciaGenero" ngControl="g.secuenciaGenero">
                             <option selected>Seleccionar</option>
-                            <option [value]="g.secuenciaGenero" *ngFor="let g of genero" >{{g.descripcionGenero}}</option>
+                            <option [value]="g.secuenciaGenero" *ngFor="let g of genero">{{g.descripcionGenero}}
+                            </option>
                         </select>
                     </div>
                 </div>
                 <div class="col-sm-3 col-6">
                     <div class="form-group">
-                        <label>Primer Nombre</label>
-                        <input type="text" class="form-control" placeholder="Primer Nombre"  
-                        name="primerNombre"  #primerNombre="ngModel"  [(ngModel)]="data.primerNombre" (change)="consultarUsuarioDisponible()">
+                        <app-text [icon]="'fas fa-user-lock'" [label]="'Primer Nombre'"
+                            (textOut)="setPrimerNombre($event)" [textInt]="data.primerNombre" [id]="'primerNombre'">
+                        </app-text>
                     </div>
                 </div>
                 <div class="col-sm-3 col-6">
                     <div class="form-group">
-                        <label>Segundo Nombre</label>
-                        <input type="text" class="form-control" placeholder="Segundo Nombre"
-                        name="segundoNombre"  #segundoNombre="ngModel"  [(ngModel)]="data.segundoNombre" (change)="consultarUsuarioDisponible()">
+                        <app-text [icon]="'fas fa-user-lock'" [label]="'Segundo Nombre'"
+                            (textOut)="setSegundoNombre($event)" [textInt]="data.segundoNombre" [id]="'segundoNombre'">
+                        </app-text>
                     </div>
                 </div>
                 <div class="col-sm-3 col-6">
                     <div class="form-group">
-                        <label >Primer Apellido</label>
-                        <input type="text" class="form-control" placeholder="Primer Apellido"
-                        name="primerApellido"  #primerApellido="ngModel"  [(ngModel)]="data.primerApellido" (change)="consultarUsuarioDisponible()">
+                        <app-text [icon]="'fas fa-user-lock'" [label]="'Primer Apellido'"
+                            (textOut)="setPrimerApellido($event)" [textInt]="data.primerApellido"
+                            [id]="'primerApellido'"></app-text>
                     </div>
                 </div>
                 <div class="col-sm-3 col-6">
                     <div class="form-group">
-                        <label>Segundo Apellido</label>
-                        <input type="text" class="form-control" placeholder="Segundo Apellido"
-                        name="segundoApellido"  #segundoApellido="ngModel"  [(ngModel)]="data.segundoApellido" (change)="consultarUsuarioDisponible()">
+                        <app-text [icon]="'fas fa-user-lock'" [label]="'Segundo Apellido'"
+                            (textOut)="setSegundoApellido($event)" [textInt]="data.segundoApellido"
+                            [id]="'segundoApellido'"></app-text>
                     </div>
                 </div>
                 <div class="col-sm-3 col-6">
                     <div class="form-group">
-                        <label >Fecha de nacimiento</label>
-                        <input type="date" class="form-control" placeholder="Fecha de nacimiento"
-                        name="fechaNacimiento"  #fechaNacimiento="ngModel"  [(ngModel)]="data.fechaNacimiento" (change)="consultarEdad()">
+                        <label>Fecha de nacimiento</label>
+                        <input type="date" class="form-control" placeholder="Fecha de nacimiento" name="fechaNacimiento"
+                            #fechaNacimiento="ngModel" [(ngModel)]="data.fechaNacimiento" (change)="consultarEdad()">
                     </div>
                 </div>
 
                 <div class="col-sm-3 col-6">
                     <div class="form-group">
-                        <label for="formGroupExampleInput">Edad</label>
-                        <input type="text" class="form-control" placeholder="15 años"
-                        name="edad"  #edad="ngModel"  [(ngModel)]="data.edad" disabled>
+                        <app-text [icon]="'fas fa-user-lock'" [label]="'Edad'"
+                        (textOut)="setEdad($event)" [textInt]="data.edad"
+                        [id]="'edad'"></app-text>
                     </div>
                 </div>
                 <div class="col-sm-3 col-6">
                     <div class="form-group">
-                        <label >Usuario</label>
-                        <input type="text" class="form-control" placeholder="TPRUEBA"
-                        name="usuario"  #usuario="ngModel"  [(ngModel)]="data.usuario" disabled>
+                        <app-text [icon]="'fas fa-user-lock'" [label]="'Usuario'"
+                        (textOut)="setUsuario($event)" [textInt]="data.usuario"
+                        [id]="'usuario'"></app-text>
                     </div>
                 </div>
             </div>
@@ -96,23 +100,23 @@
             <div class="row">
                 <div class="col-sm-3 col-6">
                     <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" class="form-control"  placeholder="prueba@prueba.com"
-                        name="email"  #email="ngModel"  [(ngModel)]="data.email">
+                        <app-text [icon]="'fas fa-user-lock'" [label]="'Email'"
+                        (textOut)="setEmail($event)" [textInt]="data.email"
+                        [id]="'email'"></app-text>
                     </div>
                 </div>
                 <div class="col-sm-3 col-6">
                     <div class="form-group">
-                        <label>Teléfono Móvil</label>
-                        <input type="number" class="form-control"  placeholder="0999999999"
-                        name="telefonoMovil"  #email="ngModel"  [(ngModel)]="data.telefonoMovil">
+                        <app-text [icon]="'fas fa-user-lock'" [label]="'Telefono Móvil'"
+                            (textOut)="setTelefonoMovil($event)" [textInt]="data.telefonoMovil"
+                            [id]="'telefonoMovil'"></app-text>              
                     </div>
                 </div>
                 <div class="col-sm-3 col-6">
                     <div class="form-group">
-                        <label>Teléfono Fijo</label>
-                        <input type="number" class="form-control" placeholder="0400000099"
-                        name="telefonoFijo"  #email="ngModel"  [(ngModel)]="data.telefonoFijo">
+                        <app-text [icon]="'fas fa-user-lock'" [label]="'Telefono Fijo'"
+                        (textOut)="setTelefonoFijo($event)" [textInt]="data.telefonoFijo"
+                        [id]="'telefonoFijo'"></app-text>  
                     </div>
                 </div>
             </div>
@@ -127,35 +131,39 @@
                 <div class="col-sm-3 col-6">
                     <div class="form-group">
                         <label>Pais</label>
-                        <select class="custom-select" (change)="getProvincia()" name="secuenciaPais"  #secuenciaPais="ngModel"  [(ngModel)]="data.secuenciaPais" ngControl="d.secuenciaPais">
+                        <select class="custom-select" (change)="getProvincia()" name="secuenciaPais"
+                            #secuenciaPais="ngModel" [(ngModel)]="data.secuenciaPais" ngControl="d.secuenciaPais">
                             <option selected="" [ngValue]=0>Seleccionar</option>
-                            <option  *ngFor="let d of pais" [ngValue]="d.secuenciaPais">{{d.nombre}}</option>
+                            <option *ngFor="let d of pais" [ngValue]="d.secuenciaPais">{{d.nombre}}</option>
                         </select>
                     </div>
                 </div>
                 <div class="col-sm-3 col-6">
                     <div class="form-group">
                         <label>Provincia</label>
-                        <select class="custom-select" (change)="getCiudad()" name="secuenciaProvincia"  #secuenciaProvincia="ngModel"  [(ngModel)]="data.secuenciaProvincia" ngControl="p.secuenciaProvincia">
+                        <select class="custom-select" (change)="getCiudad()" name="secuenciaProvincia"
+                            #secuenciaProvincia="ngModel" [(ngModel)]="data.secuenciaProvincia"
+                            ngControl="p.secuenciaProvincia">
                             <option selected="" [ngValue]=0>Seleccionar</option>
-                            <option  *ngFor="let p of provincia" [ngValue]="p.secuenciaProvincia">{{p.nombre}}</option>
+                            <option *ngFor="let p of provincia" [ngValue]="p.secuenciaProvincia">{{p.nombre}}</option>
                         </select>
                     </div>
                 </div>
                 <div class="col-sm-3 col-6">
                     <div class="form-group">
                         <label>Ciudad</label>
-                        <select class="custom-select" name="secuenciaCiudad"  #secuenciaCiudad="ngModel"  [(ngModel)]="data.secuenciaCiudad" ngControl="p.secuenciaProvincia">
+                        <select class="custom-select" name="secuenciaCiudad" #secuenciaCiudad="ngModel"
+                            [(ngModel)]="data.secuenciaCiudad" ngControl="p.secuenciaProvincia">
                             <option selected="" [ngValue]=0>Seleccionar</option>
-                            <option  *ngFor="let d of ciudad" [ngValue]="d.secuenciaCiudad">{{d.nombre}}</option>
-                            </select>
+                            <option *ngFor="let d of ciudad" [ngValue]="d.secuenciaCiudad">{{d.nombre}}</option>
+                        </select>
                     </div>
                 </div>
                 <div class="col-sm-12 col-6">
                     <div class="form-group">
-                        <label>Dirección</label>
-                        <input type="text" class="form-control" placeholder="Juan León Mera Nro. 19-36 y Av. Patria"
-                        name="direccion"  #email="ngModel"  [(ngModel)]="data.direccion">
+                        <app-text [icon]="'fas fa-user-lock'" [label]="'Dirección'"
+                            (textOut)="setDireccion($event)" [textInt]="data.direccion"
+                            [id]="'direccion'"></app-text>  
                     </div>
                 </div>
             </div>
@@ -164,7 +172,6 @@
 </div>
 <div class="row mt-2 mb-2">
     <div class="col-12 text-right m-0 p-0">
-        <button  type="button" class="btn btn-primary w-25" (click)="crearOActualizarUsuario()">Guardar</button>
+        <button type="button" class="btn btn-primary w-25" (click)="crearOActualizarUsuario()">Guardar</button>
     </div>
 </div>
-
