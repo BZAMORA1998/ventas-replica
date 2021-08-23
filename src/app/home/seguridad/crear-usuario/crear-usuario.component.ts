@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { UsuarioService } from 'src/app/service/usuario.service';
 import { Sweetalert2Component } from 'src/app/util/sweetalert2/sweetalert2.component';
 
@@ -9,10 +10,18 @@ import { Sweetalert2Component } from 'src/app/util/sweetalert2/sweetalert2.compo
 })
 export class CrearUsuarioComponent implements OnInit {
 
-  constructor( private _usuarioService:UsuarioService,
-    private sweetalert2Component:Sweetalert2Component) { }
+    public activeLang = 'es';
+    constructor(private _translate: TranslateService,
+      private _usuarioService:UsuarioService,
+      private sweetalert2Component:Sweetalert2Component,
+      ) 
+    {
+     
+    }
 
   ngOnInit(): void { 
+    this.activeLang=localStorage.getItem("languaje");
+    this._translate.setDefaultLang(this.activeLang);
   }
 
    /**

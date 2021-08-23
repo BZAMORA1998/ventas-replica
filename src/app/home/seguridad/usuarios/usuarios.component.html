@@ -6,6 +6,7 @@
                 [icon]="'fas fa-user-lock'" 
                 [label]="'seguridad.usuarios.identificacionUsuario' | translate"
                 (textOut)="setUsuario($event)"
+                (keypress.enter)="listarUsuario()"
                 ></app-text>     
             </div>
             <div class="m-2 form-group  d-flex flex-wrap align-content-end">

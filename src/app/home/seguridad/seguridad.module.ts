@@ -11,6 +11,7 @@ import { UsuariosCAComponent } from './usuarios-ca/usuarios-ca.component';
 import { FormsModule } from '@angular/forms';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { HomeRoutingModule } from '../home-routing.module';
 
 @NgModule({
   declarations: [UsuariosComponent, CrearUsuarioComponent,UsuariosCAComponent],
@@ -21,6 +22,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     FormsModule,
     NgxSkeletonLoaderModule.forRoot(),
     MatTooltipModule,
+    HomeRoutingModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

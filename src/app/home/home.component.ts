@@ -11,10 +11,10 @@ export class HomeComponent implements OnInit {
   public activeLang = 'es';
   constructor(private _translate: TranslateService) 
   {
-    this.activeLang=localStorage.getItem("languaje");
-    this._translate.setDefaultLang(this.activeLang);
   }
   ngOnInit(): void {
+    this.activeLang=localStorage.getItem("languaje");
+    this._translate.setDefaultLang(this.activeLang);
   }
 
 }

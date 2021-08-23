@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { UsuarioService } from 'src/app/service/usuario.service';
 import { Sweetalert2Component } from 'src/app/util/sweetalert2/sweetalert2.component';
@@ -14,26 +14,33 @@ export class UsuariosComponent implements OnInit {
   setUsuario(usuario){
     this.valor=usuario;
   }
-
   public activeLang = 'es';
   constructor(private _translate: TranslateService,
     private _usuarioService:UsuarioService,
     private sweetalert2Component:Sweetalert2Component
     ) 
   {
-    this.activeLang=localStorage.getItem("languaje");
-    this._translate.setDefaultLang(this.activeLang);
+   
   }
 
   public data=null;
 
   ngOnInit(): void {
+    this.activeLang=localStorage.getItem("languaje");
+    this._translate.setDefaultLang(this.activeLang);
     this.listarUsuario();
   }
 
+  @HostListener('document:keypress', ['$event'])
+  keyEvent(event: KeyboardEvent) {
+    if (event.keyCode === 13) {
+      this.listarUsuario();
+    }
+}
+
   setEstado(estado){
-    console.log("estado: "+estado);
     this.estado=estado;
+    this.listarUsuario();
   }
 
   dataEstado:any=[
@@ -57,6 +64,7 @@ export class UsuariosComponent implements OnInit {
       this._usuarioService.putActualizarUsuario(data).subscribe(
         Response=>{
           this.dataUsuarioId=Response.data;
+          this.sweetalert2Component.loading(false);
           this.sweetalert2Component.showModalConfirmacion(Response.message,null);
           this.listarUsuario();
         },
@@ -139,8 +147,10 @@ guardarRol(data){
  * @description Consulta la lista de usuarios
  */
 listarUsuario(){
+  this.sweetalert2Component.loading(true);
   this._usuarioService.getConsultaUsuario(this.page,this.perPage,this.valor,this.estado).subscribe(
     Response=>{
+      this.sweetalert2Component.loading(false);
       this.mostrarPag=false;
       this.data=Response["data"].rows;
       this.totalRows=Response["data"].totalRows;
@@ -149,6 +159,7 @@ listarUsuario(){
       }
     },
     error=>{
+      this.sweetalert2Component.loading(false);
       console.log(error.error.message);
     }
   ); 

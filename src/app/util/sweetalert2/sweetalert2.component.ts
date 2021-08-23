@@ -27,13 +27,12 @@ export class Sweetalert2Component implements OnInit {
    * @description Loading
    * @param activar 
    */
-   loading(activar: any){
+   loading(activar: Boolean){
     Swal.fire({
       background: 'none',
-      didOpen: () => {
-        Swal.showLoading()
-      } 
-    });
+      showConfirmButton: false,
+      html: '<img src="https://i.gifer.com/XVo6.gif" width="50" height="50">'
+    })
 
     if(!activar){
       Swal.close();
