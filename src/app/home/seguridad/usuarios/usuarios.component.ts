@@ -63,8 +63,8 @@ export class UsuariosComponent implements OnInit {
       this.sweetalert2Component.loading(true);
       this._usuarioService.putActualizarUsuario(data).subscribe(
         Response=>{
-          this.dataUsuarioId=Response.data;
           this.sweetalert2Component.loading(false);
+          console.log(Response);
           this.sweetalert2Component.showModalConfirmacion(Response.message,null);
           this.listarUsuario();
         },
@@ -147,10 +147,8 @@ guardarRol(data){
  * @description Consulta la lista de usuarios
  */
 listarUsuario(){
-  this.sweetalert2Component.loading(true);
   this._usuarioService.getConsultaUsuario(this.page,this.perPage,this.valor,this.estado).subscribe(
     Response=>{
-      this.sweetalert2Component.loading(false);
       this.mostrarPag=false;
       this.data=Response["data"].rows;
       this.totalRows=Response["data"].totalRows;
@@ -159,7 +157,6 @@ listarUsuario(){
       }
     },
     error=>{
-      this.sweetalert2Component.loading(false);
       console.log(error.error.message);
     }
   ); 
