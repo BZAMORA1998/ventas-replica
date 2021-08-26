@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { ModulosService } from 'src/app/service/modulos.service';
 import { UsuarioService } from 'src/app/service/usuario.service';
 import { Sweetalert2Component } from 'src/app/util/sweetalert2/sweetalert2.component';
 import Swal from 'sweetalert2';
@@ -17,7 +18,8 @@ export class UsuariosComponent implements OnInit {
   public activeLang = 'es';
   constructor(private _translate: TranslateService,
     private _usuarioService:UsuarioService,
-    private sweetalert2Component:Sweetalert2Component
+    private sweetalert2Component:Sweetalert2Component,
+    private _modulosService:ModulosService
     ) 
   {
    
@@ -30,6 +32,46 @@ export class UsuariosComponent implements OnInit {
     this._translate.setDefaultLang(this.activeLang);
     this.listarUsuario();
   }
+
+  /**
+   * @author Bryan Zamora
+   * @param incluirModulosNoParametrizados 
+   * @description Autenticacion de usuario
+   */
+  modulos:any;
+  secuenciaUsuario=0;
+   getModulosPorUsuarios(secuenciaUsuario){
+    this.secuenciaUsuario=secuenciaUsuario;
+    this._modulosService.getConsultarModulosPorUsuario(true,secuenciaUsuario).subscribe(
+      Response=>{
+          this.modulos=Response['data']
+      },
+      error=>{
+          this.sweetalert2Component.showModalError(error.error.message);
+        }
+      );
+    }
+
+    /**
+   * @author Bryan Zamora
+   * @param secuenciaUsuario 
+   * @param data
+   * @description Autenticacion de usuario
+   */
+  putModulosPorUsuarios(){
+    this.sweetalert2Component.loading(true);
+   this._modulosService.putActualizaModulosPorUsuario(this.secuenciaUsuario,this.modulos).subscribe(
+    Response=>{
+      this.sweetalert2Component.loading(false);
+      this.sweetalert2Component.showModalConfirmacion(Response.message,null);
+    },
+     error=>{
+      this.sweetalert2Component.loading(false);
+         this.sweetalert2Component.showModalError(error.error.message);
+       }
+     );
+   }
+
 
   @HostListener('document:keypress', ['$event'])
   keyEvent(event: KeyboardEvent) {

@@ -24,7 +24,7 @@ export class ModulosComponent implements OnInit {
    * @description Autenticacion de usuario
    */
    getModulosPorUsuarios(){
-    this._modulosService.getConsultarModulosPorUsuario(false).subscribe(
+    this._modulosService.getConsultarModulosPorUsuario(false,0).subscribe(
       Response=>{
           this.modulos=Response['data']
       },

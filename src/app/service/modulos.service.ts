@@ -9,8 +9,12 @@ export class ModulosService {
 
   constructor(private apiService: ApiService,private http: HttpClient){}
 
-  getConsultarModulosPorUsuario(booIncluirModulosNoParametrizados) {
-    return this.apiService.ApiCallSpring("GET",`/usuarios/modulos?incluirModulosNoParametrizados=${booIncluirModulosNoParametrizados}`,null,null);
+  getConsultarModulosPorUsuario(booIncluirModulosNoParametrizados,secuenciaUsuario) {
+    return this.apiService.ApiCallSpring("GET",`/usuarios/modulos?incluirModulosNoParametrizados=${booIncluirModulosNoParametrizados}&secuenciaUsuario=${secuenciaUsuario}`,null,null);
+  }
+
+  putActualizaModulosPorUsuario(secuenciaUsuario,body) {
+    return this.apiService.ApiCallSpring("PUT",`/usuarios/modulos?secuenciaUsuario=${secuenciaUsuario}`,body,null);
   }
   
 }

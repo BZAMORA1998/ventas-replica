@@ -78,7 +78,9 @@
                                     data-toggle="modal" data-target="#actualizarUsuario">
                                     <img class="cursor-pointer"  matTooltip="Eliminar usuario" src="../../../../../../assets/img/eliminar.svg" width="25" height="25"
                                      data-toggle="modal" (click)="deleteEliminarUsuario(d.secuenciaUsuario,d.usuario)">
-                                </td>
+                                     <img class="cursor-pointer"  matTooltip="Agregar Modulos" src="../../../../../../assets/img/modulos.png" width="25" height="25"
+                                     data-toggle="modal" (click)="getModulosPorUsuarios(d.secuenciaUsuario)" data-target="#modulos">
+                                 </td>
                               </tr>
                           </ng-template>
                           <ng-template #noResult> 
@@ -110,4 +112,31 @@
         </div>
       </div>
     </div>
+</div>
+
+<!-- Modal Modulos-->
+<div class="modal" id="modulos" tabindex="-1" role="dialog" aria-labelledby="modulos" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex flex-wrap justify-content-center">
+          <div class="form-check m-2 " *ngFor="let m of modulos;index as i">
+            <input #esSelect="ngModel"  [(ngModel)]="m.esSelect" class="form-check-input" type="checkbox" value="" id="defaultCheck1-{{i}}">
+            <label class="form-check-label" for="defaultCheck1-{{i}}">
+              {{m.nombre | titlecase}}
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"  (click)="putModulosPorUsuarios()">Save changes</button>
+      </div>
+    </div>
   </div>
+</div>
