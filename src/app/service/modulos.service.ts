@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ApiService } from './api.service';
 
@@ -9,8 +9,8 @@ export class ModulosService {
 
   constructor(private apiService: ApiService,private http: HttpClient){}
 
-  getConsultarModulosPorUsuario() {
-    return this.apiService.ApiCallSpring("GET","/modulos",null,null);
+  getConsultarModulosPorUsuario(booIncluirModulosNoParametrizados) {
+    return this.apiService.ApiCallSpring("GET",`/usuarios/modulos?incluirModulosNoParametrizados=${booIncluirModulosNoParametrizados}`,null,null);
   }
   
 }

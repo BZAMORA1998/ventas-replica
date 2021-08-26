@@ -2,13 +2,12 @@
     <h1 class="w-100 text-start">{{'home.modulos' | translate}}</h1>
     <p class="d-block w-100">{{'modulos.bienvenido1' | translate}} Bryan! {{'modulos.bienvenido2' | translate}}</p>
     <div class="m-3 modulos" *ngFor="let modulo of modulos">
-        <div class="card" routerLink="../seguridad">
+        <div class="card" routerLink="{{modulo.url}}">
             <div class="card-img-top text-center pt-3">
-                <h4 class="card-title bold">{{modulo.name}}</h4>
+                <h4 class="card-title bold">{{modulo.nombre}}</h4>
             </div>
             <div class="card-body d-flex flex-wrap justify-content-around">
-              <h4 class="card-title bold w-100 text-center">{{modulo.registro}}</h4>
-              <i class="{{modulo.img}}" aria-hidden="true"></i>
+              <i class="fa fa-unlock fa-3x" aria-hidden="true"></i>
             </div>
           </div>
     </div>

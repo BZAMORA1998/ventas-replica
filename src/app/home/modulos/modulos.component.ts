@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { ModulosService } from 'src/app/service/modulos.service';
+import { Sweetalert2Component } from 'src/app/util/sweetalert2/sweetalert2.component';
 
 @Component({
   selector: 'app-modulos',
@@ -8,52 +10,28 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class ModulosComponent implements OnInit {
 
-  constructor( private _translate: TranslateService,) { }
+  constructor( private _translate: TranslateService, private _modulosService: ModulosService,private _sweetalert2Component: Sweetalert2Component ) { }
 
   ngOnInit(): void {
+    this.getModulosPorUsuarios();
   }
 
-  modulos: any[] = [
-    {
-      "name": "SEGURIDAD",
-      "registro":"11 REGISTRADA",
-      "img":"fa fa-unlock fa-3x"
-    },
-    {
-      "name": "PRODUCTOS",
-      "registro":"11 REGISTRADA",
-      "img":"fa fa-unlock fa-3x"
-    },
-    {
-      "name": "COMPRAS",
-      "registro":"11 REGISTRADA",
-      "img":"fa fa-unlock fa-3x"
-    },
-    {
-      "name": "VENTAS",
-      "registro":"11 REGISTRADA",
-      "img":"fa fa-unlock fa-3x"
-    },
-    {
-      "name": "MOVIMIENTO DE CAJAS",
-      "registro":"11 REGISTRADA",
-      "img":"fa fa-unlock fa-3x"
-    },
-    {
-      "name": "DEVOLUCIONES",
-      "registro":"11 REGISTRADA",
-      "img":"fa fa-unlock fa-3x"
-    },
-    {
-      "name": "KARDEX",
-      "registro":"11 REGISTRADA",
-      "img":"fa fa-unlock fa-3x"
-    },
-    {
-      "name": "REPORTES",
-      "registro":"11 REGISTRADA",
-      "img":"fa fa-unlock fa-3x"
+  modulos: any[]
+
+  /**
+   * @author Bryan Zamora
+   * @param incluirModulosNoParametrizados 
+   * @description Autenticacion de usuario
+   */
+   getModulosPorUsuarios(){
+    this._modulosService.getConsultarModulosPorUsuario(false).subscribe(
+      Response=>{
+          this.modulos=Response['data']
+      },
+      error=>{
+          this._sweetalert2Component.showModalError(error.error.message);
+        }
+      );
     }
-  ];
 
 }
