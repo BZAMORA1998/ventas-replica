@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { CambiarContrasenaComponent } from './cambiar-contrasena/cambiar-contrasena.component';
 import { LoginComponent } from './login/login.component';
 import { OlvidoContrasenaComponent } from './olvido-contrasena/olvido-contrasena.component';
+import { AuthGuard } from './service/auth.guard';
 
 
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
         path: 'olvido-contrasena',  component: OlvidoContrasenaComponent 
       },
       { 
-        path: 'cambiar-contrasena',  component: CambiarContrasenaComponent 
+        path: 'cambiar-contrasena',  component: CambiarContrasenaComponent, canActivate: [AuthGuard], 
+        data: {role: 'GENERAL'}  
       },
       { 
         path: 'login',  component: LoginComponent 

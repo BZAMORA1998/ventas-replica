@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { UsuarioService } from 'src/app/service/usuario.service';
 import { Sweetalert2Component } from '../util/sweetalert2/sweetalert2.component';
 
@@ -25,6 +25,16 @@ export class OlvidoContrasenaComponent implements OnInit {
   setCorreo(correo){  
     this.correo=correo;
     this.validaSiEsVacio();
+  }
+
+  
+  @HostListener('document:keypress', ['$event'])
+  keyEvent(event: KeyboardEvent) {
+    if (event.keyCode === 13) {
+      if(this.correo!=""){
+             this.recuperarContrasena();
+      }
+    }
   }
 
   /**

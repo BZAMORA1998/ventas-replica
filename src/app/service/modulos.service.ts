@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { ApiService } from './api.service';
 
 @Injectable({
@@ -15,6 +16,10 @@ export class ModulosService {
 
   putActualizaModulosPorUsuario(secuenciaUsuario,body) {
     return this.apiService.ApiCallSpring("PUT",`/usuarios/modulos?secuenciaUsuario=${secuenciaUsuario}`,body,null);
+  }
+
+  getConsultarPermisoModulo(mnemonico):Observable<any>{
+    return this.apiService.ApiCallSpring("GET",`/usuarios/modulos/permiso?mnemonico=${mnemonico}`,null,null);
   }
   
 }

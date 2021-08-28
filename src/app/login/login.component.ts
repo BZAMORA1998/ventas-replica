@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { AuthService } from '../service/auth.service';
@@ -33,6 +33,15 @@ export class LoginComponent implements OnInit {
     localStorage.setItem("languaje",activeLang);
   }
 
+  @HostListener('document:keypress', ['$event'])
+  keyEvent(event: KeyboardEvent) {
+    if (event.keyCode === 13) {
+      if(this.usuario!="" && this.contrasena!="" && this.usuario!=null && this.contrasena!=null){
+         this.postAutenticacion()
+      }
+    }
+  }
+
   data:any=[
     {
     "id":"en",
@@ -59,6 +68,8 @@ export class LoginComponent implements OnInit {
     }
 
   ngOnInit(): void {
+    localStorage.removeItem("data");
+    localStorage.removeItem("autenticado");
   }
 
   validaCamposVacios(){
@@ -96,6 +107,7 @@ export class LoginComponent implements OnInit {
             this._router.navigate(['../cambiar-contrasena']);
           }
           localStorage.setItem("data",JSON.stringify(Response['data']));
+          localStorage.setItem("autenticado",JSON.stringify(true));
         },
       error=>{
           this._sweetalert2Component.showModalError(error.error.message);

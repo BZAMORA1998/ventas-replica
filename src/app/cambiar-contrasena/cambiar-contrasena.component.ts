@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { UsuarioService } from 'src/app/service/usuario.service';
 import { Sweetalert2Component } from '../util/sweetalert2/sweetalert2.component';
@@ -67,6 +67,16 @@ export class CambiarContrasenaComponent implements OnInit {
     }else{
       console.log("No");
       $("#aceptar").prop('disabled', true);
+    }
+  }
+
+  @HostListener('document:keypress', ['$event'])
+  keyEvent(event: KeyboardEvent) {
+    if (event.keyCode === 13) {
+      if(this.contrasena2!="" && this.contrasena1!=""
+     && this.contrasena2==this.contrasena1){
+             this.cambiarContrasena();
+      }
     }
   }
 
