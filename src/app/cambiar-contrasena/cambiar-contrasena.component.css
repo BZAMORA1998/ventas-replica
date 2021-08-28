@@ -1,0 +1,19 @@
+.container-fluid{
+    width: 100vw;
+    height: 100vh;
+    background: #43C6AC;
+    background: -webkit-linear-gradient(to right, #191654, #43C6AC);
+    background: linear-gradient(to right, #191654, #43C6AC);
+}
+
+.eye{
+    position: absolute;
+    margin-left: 260px;
+    margin-top: -30px;
+    border: none;
+    background-color: transparent;
+}
+
+.card{
+    min-height: 75%;
+}

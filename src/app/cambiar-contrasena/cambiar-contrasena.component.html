@@ -1,0 +1,42 @@
+
+<div class="container-fluid">
+    <div class="row h-100 justify-content-center align-items-center">  
+            <div class="card col-3 pt-5">
+                <h1 class="card-title text-center">Cambiar Contraseña</h1>
+                <i class="fas fa-user-circle fa-7x d-flex justify-content-center"></i> 
+                <div class="card-body">
+                <form>
+                    <div class="form-group">
+                    <app-text 
+                        [icon]="'fas fa-user-lock'" 
+                        [label]="'Contraseña Nueva'"
+                        (textOut)="setContrasena1($event)"
+                        [textInt]="contrasena1"
+                        [id]="'contrasena1'"
+                        [typeInput]="typeInputF1"
+                    ></app-text>      
+                        <label *ngIf="showPF1" (click)="mostrarPassword1()" type="button" class="button"><i class="eye fa fa-eye showPass" aria-hidden="true"></i></label>
+                        <label *ngIf="!showPF1" (click)="mostrarPassword1()" type="button" class="button"><i class="eye fa fa-eye-slash showPass" aria-hidden="true"></i></label>
+                    </div>
+                    <div class="form-group">
+                        <app-text 
+                        [icon]="'fas fa-user-lock'" 
+                        [label]="'Confirmar Nueva Contraseña'"
+                        (textOut)="setContrasena2($event)"
+                        [textInt]="contrasena2"
+                        [id]="'contrasena2'"
+                        [typeInput]="typeInputF2"
+                    ></app-text>      
+                        <label *ngIf="showPF2" (click)="mostrarPassword2()" type="button" class="button"><i class="eye fa fa-eye showPass" aria-hidden="true"></i></label>
+                        <label *ngIf="!showPF2" (click)="mostrarPassword2()" type="button" class="button"><i class="eye fa fa-eye-slash showPass" aria-hidden="true"></i></label>
+                    </div>
+                    <div class="form-group ">
+                        <button (click)="cambiarContrasena()" id="aceptar" matTooltip="Info about the action" type="submit" class="btn btn-info w-100" disabled>Guardar Contraseña</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+    </div>
+</div>
+  
+  

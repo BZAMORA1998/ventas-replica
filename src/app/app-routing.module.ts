@@ -1,13 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+import { CambiarContrasenaComponent } from './cambiar-contrasena/cambiar-contrasena.component';
 import { LoginComponent } from './login/login.component';
+import { OlvidoContrasenaComponent } from './olvido-contrasena/olvido-contrasena.component';
 
 
 const routes: Routes = [
   {
      path: '', component: AppComponent, children: [
+      { 
+        path: 'olvido-contrasena',  component: OlvidoContrasenaComponent 
+      },
+      { 
+        path: 'cambiar-contrasena',  component: CambiarContrasenaComponent 
+      },
       { 
         path: 'login',  component: LoginComponent 
       },

@@ -10,12 +10,16 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { UtilModule } from './util/util.module';
 import { HomeComponent } from './home/home.component';
+import { CambiarContrasenaComponent } from './cambiar-contrasena/cambiar-contrasena.component';
+import { OlvidoContrasenaComponent } from './olvido-contrasena/olvido-contrasena.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    CambiarContrasenaComponent,
+    OlvidoContrasenaComponent
   ],
   imports: [
     BrowserModule,
