@@ -106,12 +106,10 @@ export class UsuariosComponent implements OnInit {
       this._usuarioService.putActualizarUsuario(data).subscribe(
         Response=>{
           this.sweetalert2Component.loading(false);
-          console.log(Response);
           this.sweetalert2Component.showModalConfirmacion(Response.message,null);
           this.listarUsuario();
         },
         error=>{
-          console.log(error.error.message);
           this.sweetalert2Component.loading(false);
           this.sweetalert2Component.showModalError(error.error.message);
         }
@@ -177,7 +175,6 @@ estadoUsuario(){
 dataRoles=[];
 guardarRol(data){
   this.dataRoles=[];
-  console.log(data);
   data.forEach(element => {
     if(element.esSelect==true)
       this.dataRoles.push(element.secuenciaRol);
@@ -210,11 +207,7 @@ listarUsuario(){
  */
 activarOInactivarUsuario(secuenciaUsuario){
   this._usuarioService.putActivarOInactivarUsuario(secuenciaUsuario).subscribe(
-    Response=>{
-      
-    },
     error=>{
-      console.log(error.error.message);
       this.sweetalert2Component.showModalError(error.error.message);
     }
   ); 

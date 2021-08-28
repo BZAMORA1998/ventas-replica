@@ -36,11 +36,7 @@ export class ApiService {
               "Content-Type":"application/json",
               "Authorization":"Bearer " + this.getToken()
             });
-            console.log("Header: "+this.getToken());
         }
-
-        console.log("Header: ",headers);
-
         switch (method) {
             case "GET":
                 return this.http.get(this.URL_API_SPRING + endpoint, { headers: headers , params: data })

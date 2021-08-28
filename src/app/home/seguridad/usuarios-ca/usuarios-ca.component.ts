@@ -153,7 +153,6 @@ export class UsuariosCAComponent implements OnInit {
   }
 
   setSecuenciaPais(secuenciaPais){
-    console.log(secuenciaPais);
     this.data.secuenciaPais=secuenciaPais;
     this.getProvincia();
   }

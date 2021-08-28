@@ -33,14 +33,10 @@ export class HomeComponent implements OnInit {
           this.modulos=Response['data']
 
           this.modulos.forEach(element => {
-            console.log(element);
             if(element.mnemonico=="SEGURIDAD"){
               this.seguridad=true;
             }
           });
-
-          console.log(this.seguridad);
-          
       },
       error=>{
           this._sweetalert2Component.showModalError(error.error.message);
