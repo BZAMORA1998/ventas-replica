@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-11">
-        <div class="d-flex justify-content-start mt-4">
-            <div class="m-2 form-group  d-flex flex-wrap align-content-end">
+        <div class="d-flex row flex-wrap  justify-content-start mt-4">
+            <div class="p-2 col-8 col-md-3 form-group d-flex align-content-end">
                 <app-text 
                 [icon]="'fas fa-user-lock'" 
                 [label]="'seguridad.usuarios.identificacionUsuario' | translate"
@@ -9,7 +9,7 @@
                 (keypress.enter)="listarUsuario()"
                 ></app-text>     
             </div>
-            <div class="m-2 form-group  d-flex flex-wrap align-content-end">
+            <div class="p-2 col-3 col-md-2  form-group d-flex flex-wrap align-content-end">
                 <app-select
                 [icon]="'fa fa-language'" 
                 [label]="'seguridad.usuarios.estado' | translate"
@@ -20,7 +20,7 @@
                 [id]="'estado'"
                 ></app-select>   
             </div>
-            <div class="m-2 form-group d-flex flex-wrap align-content-end">
+            <div class="p-2 col-1   form-group d-flex flex-wrap align-content-end">
                 <a class="cursor-pointer" (click)="listarUsuario()"matTooltip="Buscar"><img width="40" height="40" src="../../../../assets/img/magnifying-glass.png"></a>
             </div>
         </div>
