@@ -2,14 +2,14 @@
 <div class="container-fluid">
     <div class="row h-100 justify-content-center align-items-center">  
             <div class="card col-3 pt-5">
-                <h1 class="card-title text-center">Cambiar Contraseña</h1>
+                <h1 class="card-title text-center">{{'login.cambiarContrasena' | translate}}</h1>
                 <i class="fas fa-user-circle fa-7x d-flex justify-content-center"></i> 
                 <div class="card-body">
                 <form>
                     <div class="form-group">
                     <app-text 
                         [icon]="'fas fa-user-lock'" 
-                        [label]="'Contraseña Nueva'"
+                        [label]="'login.contrasenaNueva' | translate"
                         (textOut)="setContrasena1($event)"
                         [textInt]="contrasena1"
                         [id]="'contrasena1'"
@@ -21,7 +21,7 @@
                     <div class="form-group">
                         <app-text 
                         [icon]="'fas fa-user-lock'" 
-                        [label]="'Confirmar Nueva Contraseña'"
+                        [label]="'login.conformarContrasenaNueva' | translate"
                         (textOut)="setContrasena2($event)"
                         [textInt]="contrasena2"
                         [id]="'contrasena2'"
@@ -31,7 +31,7 @@
                         <label *ngIf="!showPF2" (click)="mostrarPassword2()" type="button" class="button"><i class="eye fa fa-eye-slash showPass" aria-hidden="true"></i></label>
                     </div>
                     <div class="form-group ">
-                        <button (click)="cambiarContrasena()" id="aceptar" matTooltip="Info about the action" type="submit" class="btn btn-info w-100" disabled>Guardar Contraseña</button>
+                        <button (click)="cambiarContrasena()" id="aceptar" type="submit" class="btn btn-info w-100" disabled>{{'login.guardarContrasena' | translate}}</button>
                     </div>
                 </form>
                 </div>

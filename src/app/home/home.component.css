@@ -13,6 +13,7 @@
     bottom: 0px;
     width: 100%;
     color: #e1ffff;
+    height: 100% !important;
   }
   .nav-side-menu .brand {
     background-color: #23282e;

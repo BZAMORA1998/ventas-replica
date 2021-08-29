@@ -23,8 +23,7 @@ export class LoginComponent implements OnInit {
     private _router:Router,
     private _auth: AuthService 
   ) {
-    this._translate.setDefaultLang(this.activeLang);
-    localStorage.setItem("languaje",this.activeLang);
+    
   }
 
   public cambiarLenguaje(activeLang) {
@@ -68,6 +67,7 @@ export class LoginComponent implements OnInit {
     }
 
   ngOnInit(): void {
+    this._translate.setDefaultLang(this.activeLang);
     localStorage.removeItem("data");
     localStorage.removeItem("autenticado");
   }

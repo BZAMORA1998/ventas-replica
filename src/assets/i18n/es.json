@@ -9,7 +9,14 @@
         "bottonInicioSesion":"Iniciar Sesión",
         "usuarioRequerido":"El campo usuario es requerido.",
         "contrasenaRequerido":"El campo contraseña es requerido.",
-        "lenguaje":"Lenguaje"
+        "lenguaje":"Lenguaje",
+        "recuperarContrasena":"Recuperar contraseña",
+        "emailOUsuario":"Email o Usuario",
+        "enviarContrasena":"Enviar contraseña",
+        "guardarContrasena":"Guardar contraseña",
+        "contrasenaNueva":"Contraseña nueva",
+        "conformarContrasenaNueva":"Confirmar contraseña nueva",
+        "cambiarContrasena":"Cambiar contraseña"
     },
     "home":{
         "modulos":"Módulos",

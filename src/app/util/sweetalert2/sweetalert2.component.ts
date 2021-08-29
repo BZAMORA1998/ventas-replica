@@ -30,6 +30,7 @@ export class Sweetalert2Component implements OnInit {
    loading(activar: Boolean){
     Swal.fire({
       background: 'none',
+      heightAuto: false,
       showConfirmButton: false,
       html: '<img src="https://i.gifer.com/XVo6.gif" width="50" height="50">'
     })
@@ -45,6 +46,7 @@ export class Sweetalert2Component implements OnInit {
     Swal.fire({
       icon: 'error',
       title: 'Oops...',
+      heightAuto: false,
       text: message,
       confirmButtonColor:'#007bff',
     })
@@ -53,6 +55,7 @@ export class Sweetalert2Component implements OnInit {
   public showModalConfirmacion(message: any,url: any){
     Swal.fire({
       position: 'center',
+      heightAuto: false,
       icon: 'success',
       title: message,
       confirmButtonColor:'#007bff',

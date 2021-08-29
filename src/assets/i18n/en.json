@@ -9,7 +9,14 @@
         "bottonInicioSesion":"Log in",
         "usuarioRequerido":"The user field is required.",
         "contrasenaRequerido":"The password field is required.",
-        "lenguaje":"Language"
+        "lenguaje":"Language",
+        "recuperarContrasena":"Recover password",
+        "emailOUsuario":"Email or User",
+        "enviarContrasena":"Send password",
+        "guardarContrasena":"Save password",
+        "contrasenaNueva":"new password",
+        "conformarContrasenaNueva":"Confirm new password",
+        "cambiarContrasena":"Change Password"
     },
     "home":{
         "modulos":"Modules",

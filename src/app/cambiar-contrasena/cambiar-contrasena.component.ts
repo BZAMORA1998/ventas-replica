@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import * as $ from 'jquery';
 import { UsuarioService } from 'src/app/service/usuario.service';
 import { Sweetalert2Component } from '../util/sweetalert2/sweetalert2.component';
@@ -12,12 +13,15 @@ import { Sweetalert2Component } from '../util/sweetalert2/sweetalert2.component'
 })
 export class CambiarContrasenaComponent implements OnInit {
 
-  constructor(  private _usuarioService:UsuarioService,
+  public activeLang = 'es';
+  constructor(
+    private _translate: TranslateService,  private _usuarioService:UsuarioService,
     private sweetalert2Component:Sweetalert2Component,) { 
     
   }
 
   ngOnInit(): void {
+    this._translate.setDefaultLang(this.activeLang);
   }
 
   typeInputF1="password";
