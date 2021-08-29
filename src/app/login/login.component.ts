@@ -12,8 +12,8 @@ declare let $: any;
 })
 export class LoginComponent implements OnInit {
 
-  usuario:any=null;
-  contrasena:any=null;
+  usuario:any="BZAMORA";
+  contrasena:any="1234";
   langArray:any;
 
   public activeLang = 'es';
@@ -26,6 +26,10 @@ export class LoginComponent implements OnInit {
     
   }
 
+  /**
+   * Cambia el lenguaje
+   * @param activeLang 
+   */
   public cambiarLenguaje(activeLang) {
     this.activeLang = activeLang;
     this._translate.use(activeLang);

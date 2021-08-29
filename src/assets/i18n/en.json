@@ -21,6 +21,13 @@
     "home":{
         "modulos":"Modules",
         "seguridad":"Security",
+        "compras":"Shopping",
+        "devoluciones":"Returns",
+        "kardex":"Kardex",
+        "productos":"Products",
+        "reportes":"Reports",
+        "movimientos_de_cajas":"Box Movements",
+        "ventas":"Sales",
         "usuarios":"Users",
         "roles":"Roles",
         "cerrar_sesion":"SignOoff",

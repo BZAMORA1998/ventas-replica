@@ -21,6 +21,13 @@
     "home":{
         "modulos":"Módulos",
         "seguridad":"Seguridad",
+        "compras":"Compras",
+        "devoluciones":"Devoluciones",
+        "kardex":"Kardex",
+        "productos":"Productos",
+        "reportes":"Reportes",
+        "movimientos_de_cajas":"Movimientos de Cajas",
+        "ventas":"Ventas",
         "usuarios":"Usuarios",
         "roles":"Roles",
         "cerrar_sesion":"Cerrar Sesión",

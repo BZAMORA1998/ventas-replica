@@ -2,6 +2,10 @@
     background-color: #23282e;
 }
 
+#usuario{
+  display: none;
+}
+
 .nav-side-menu {
     overflow: auto;
     font-family: verdana;

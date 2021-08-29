@@ -31,6 +31,13 @@ export class HomeComponent implements OnInit {
    */
    modulos:any;
    seguridad=false;
+   compras=false;
+   ventas=false;
+   reportes=false;
+   productos=false;
+   movimientos=false;
+   kardex=false;
+   devoluciones=false;
    getModulosPorUsuarios(){
     this._modulosService.getConsultarModulosPorUsuario(false,0).subscribe(
       Response=>{
@@ -39,6 +46,20 @@ export class HomeComponent implements OnInit {
           this.modulos.forEach(element => {
             if(element.mnemonico=="SEGURIDAD"){
               this.seguridad=true;
+            }else if(element.mnemonico=="COMPRAS"){
+              this.compras=true;
+            }else if(element.mnemonico=="VENTAS"){
+              this.ventas=true;
+            }else if(element.mnemonico=="REPORTES"){
+              this.reportes=true;
+            }else if(element.mnemonico=="PRODUCTOS"){
+              this.productos=true;
+            }else if(element.mnemonico=="MOVIMIENTOS_DE_CAJAS"){
+              this.movimientos=true;
+            }else if(element.mnemonico=="KARDEX"){
+              this.kardex=true;
+            }else if(element.mnemonico=="DEVOLUCIONES"){
+              this.devoluciones=true;
             }
           });
       },
