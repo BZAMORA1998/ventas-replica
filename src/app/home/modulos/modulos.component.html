@@ -1,6 +1,6 @@
 <div class="d-flex mt-5 flex-wrap justify-content-around">
     <h1 class="w-100 text-start">{{'home.modulos' | translate}}</h1>
-    <p class="d-block w-100">{{'modulos.bienvenido1' | translate}} Bryan! {{'modulos.bienvenido2' | translate}}</p>
+    <p class="d-block w-100">{{'modulos.bienvenido1' | translate}} {{dataUser.primerNombre | titlecase }}! {{'modulos.bienvenido2' | translate}}</p>
     <div class="m-3 modulos" *ngFor="let modulo of modulos">
         <div class="card" routerLink="{{modulo.url}}">
             <div class="card-img-top text-center pt-3">

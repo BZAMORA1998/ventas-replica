@@ -1,5 +1,9 @@
+import { Parser } from '@angular/compiler/src/ml_parser/parser';
 import { Component, HostListener, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { parseJSON } from 'jquery';
+import { Observable } from 'rxjs/Observable';
+import { map } from 'rxjs/operators';
 import { ModulosService } from 'src/app/service/modulos.service';
 import { UsuarioService } from 'src/app/service/usuario.service';
 import { Sweetalert2Component } from 'src/app/util/sweetalert2/sweetalert2.component';
@@ -31,7 +35,27 @@ export class UsuariosComponent implements OnInit {
     this.activeLang=localStorage.getItem("languaje");
     this._translate.setDefaultLang(this.activeLang);
     this.listarUsuario();
+
+     
+    this.setEstadoLanguaje('seguridad.usuarios.todos',"TODOS");
+    this.setEstadoLanguaje('seguridad.usuarios.activo',"ACTIVO");
+    this.setEstadoLanguaje('seguridad.usuarios.inactivo',"INACTIVO");
   }
+
+  public setEstadoLanguaje(text,value){
+    this._translate.get(text).subscribe(
+      response => {
+        console.log("response: ",response);
+        var result={
+          "id":value,
+          "nombre":  response
+        };
+
+        this.dataEstado.push(result);
+      }
+    );
+  } 
+
 
   /**
    * @author Bryan Zamora
@@ -85,20 +109,7 @@ export class UsuariosComponent implements OnInit {
     this.listarUsuario();
   }
 
-  dataEstado:any=[
-    {
-    "id":"TODOS",
-    "nombre":"Todos"
-    },
-    {
-      "id":"ACTIVO",
-      "nombre":"Activo"
-    },
-    {
-      "id":"INACTIVO",
-      "nombre":"Inactivo"
-      },
-  ];
+  dataEstado:any=[];
 
 
   actualizarUsuario(data){

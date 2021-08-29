@@ -41,7 +41,10 @@
             "accion":"Acción",
             "estado":"Estado",
             "identificacionUsuario":"Nº Identificación o usuario",
-            "nombresCompletos":"Nombres Completos"
+            "nombresCompletos":"Nombres Completos",
+            "todos":"Todos",
+            "activo":"Activo",
+            "inactivo":"Inactivo"
         }
     }
 }

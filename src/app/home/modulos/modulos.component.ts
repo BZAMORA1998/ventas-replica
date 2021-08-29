@@ -12,7 +12,9 @@ export class ModulosComponent implements OnInit {
 
   constructor( private _translate: TranslateService, private _modulosService: ModulosService,private _sweetalert2Component: Sweetalert2Component ) { }
 
+  dataUser:any=[];
   ngOnInit(): void {
+    this.dataUser=JSON.parse(localStorage.getItem("data"));
     this.getModulosPorUsuarios();
   }
 

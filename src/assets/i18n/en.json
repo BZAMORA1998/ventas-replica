@@ -42,7 +42,10 @@
             "accion":"Action",
             "estado":"State",
             "identificacionUsuario":"Nº Identification or user",
-            "nombresCompletos":"Complete Names"
+            "nombresCompletos":"Complete Names",
+            "todos":"All",
+            "activo":"Active",
+            "inactivo":"Inactive"
         }
     }
 }
