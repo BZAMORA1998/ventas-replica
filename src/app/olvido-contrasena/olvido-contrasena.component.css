@@ -9,3 +9,9 @@
 .card{
     min-height: 60%;
 }
+
+@media (max-width: 575.98px) {
+    .card{
+        min-width:70% !important;
+    }
+}

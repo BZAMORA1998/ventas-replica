@@ -8,10 +8,20 @@
 
 .eye{
     position: absolute;
-    margin-left: 270px;
+    margin-left: 80%;
     margin-top: -30px;
     border: none;
     background-color: transparent;
+}
+
+@media (max-width: 575.98px) {
+    .card{
+        min-width:70% !important;
+    }
+
+    .eye{
+        margin-left: 80%;
+    }
 }
 
 

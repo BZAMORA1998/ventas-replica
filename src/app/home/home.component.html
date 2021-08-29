@@ -6,7 +6,8 @@
                 <div class="card mt-3 w-50">
                     <img class="card-img-top" src="../../assets/img/Avatar_Male_4.png" alt="Card image cap">
                     <div class="card-body">
-                      <h4 class="card-title">{{dataUser.primerNombre | titlecase }} {{dataUser.primerApellido |titlecase }}</h4>
+                      <h4 class="card-title" id="nombreUsuario">{{dataUser.primerNombre | titlecase }} {{dataUser.primerApellido |titlecase }}</h4>
+                      <h4 class="card-title" id="usuario">{{dataUser.primerNombre | titlecase }} </h4>
                     </div>
                 </div>
             </div>
@@ -15,20 +16,20 @@
           
                 <div class="menu-list">
           
-                    <ul id="menu-content" class="menu-content collapse out">
+                    <ul id="menu-content" class="menu-content collapse out show">
                         <li>
                           <a routerLink="./modulos"><i class="fa fa-dashboard fa-lg" aria-hidden="true"></i>{{'home.modulos' | translate}}</a>
                         </li>
         
                         <li *ngIf="seguridad"  data-toggle="collapse" data-target="#Seguridad" class="collapsed active">
-                          <a routerLink="./seguridad"><i class="fa fa-unlock" aria-hidden="true"></i>{{'home.seguridad' | translate}}<span class="arrow"><i class="fa fa-chevron-down" aria-hidden="true"></i></span></a>
+                          <a routerLink="./seguridad"><i class="fa fa-unlock" aria-hidden="true"></i><p class="d-inline">{{'home.seguridad' | translate}}</p><span class="arrow"><i class="fa fa-chevron-down" aria-hidden="true"></i></span></a>
                         </li>
                         <ul class="sub-menu collapse" id="Seguridad">
-                            <li><a routerLink="./seguridad" ><i class="fa fa-users fa-lg"></i>{{'home.usuarios' | translate}}</a></li>
+                            <li><a routerLink="./seguridad" ><i class="fa fa-users fa-lg"></i><p class="d-inline">{{'home.usuarios' | translate}}</p></a></li>
                         </ul>
                         <li>
                         <a routerLink="../login">
-                            <i class="fa fa-sign-out" aria-hidden="true"></i>{{'home.cerrar_sesion' | translate}}
+                            <i class="fa fa-sign-out" aria-hidden="true"></i><p class="d-inline">{{'home.cerrar_sesion' | translate}}</p>
                         </a>
                         </li>
                     </ul>
