@@ -3,7 +3,7 @@
     <label class="position-absolute" for="texto" id="textoF-{{id}}" >
         <i class="{{icon}} mr-2"></i>{{label}}
         </label>
-        <input autocomplete="nope" type="{{typeInput}}" class="form-control mt-3" id="textoI-{{id}}" 
+        <input [readonly]="inactivar" autocomplete="nope" type="{{typeInput}}" class="form-control mt-3" id="textoI-{{id}}" 
         name="txt_texto" 
          #txt_usuario="ngModel" 
          [(ngModel)]="textInt" (change)="setText()" 

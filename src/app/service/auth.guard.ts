@@ -23,8 +23,7 @@ export class AuthGuard implements CanActivate {
       return this._modulosService.getConsultarPermisoModulo(route.data.role)
       .map(Response => {
 
-        this.permisoModulo=Response['data'];
-        
+        this.permisoModulo=Response['data']; 
         if(this.auth.estaAutenticado() && this.permisoModulo){
           return true;
         }

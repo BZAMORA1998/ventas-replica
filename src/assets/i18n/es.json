@@ -3,20 +3,20 @@
         "seleccionar":"Seleccionar"
     },
     "login" : {
-        "iniciarSesion":"Inicia sesión con tu cuenta",
+        "iniciarSesion":"Inicia Sesión con tu Cuenta",
         "usuario":"Usuario",
         "contrasena":"Contraseña",
         "bottonInicioSesion":"Iniciar Sesión",
-        "usuarioRequerido":"El campo usuario es requerido.",
-        "contrasenaRequerido":"El campo contraseña es requerido.",
+        "usuarioRequerido":"El Campo Usuario es Requerido.",
+        "contrasenaRequerido":"El Campo Contraseña es Requerido.",
         "lenguaje":"Lenguaje",
-        "recuperarContrasena":"Recuperar contraseña",
+        "recuperarContrasena":"Recuperar Contraseña",
         "emailOUsuario":"Email o Usuario",
-        "enviarContrasena":"Enviar contraseña",
-        "guardarContrasena":"Guardar contraseña",
-        "contrasenaNueva":"Contraseña nueva",
-        "conformarContrasenaNueva":"Confirmar contraseña nueva",
-        "cambiarContrasena":"Cambiar contraseña"
+        "enviarContrasena":"Enviar Contraseña",
+        "guardarContrasena":"Guardar Contraseña",
+        "contrasenaNueva":"Contraseña Nueva",
+        "conformarContrasenaNueva":"Confirmar Contraseña Nueva",
+        "cambiarContrasena":"Cambiar Contraseña"
     },
     "home":{
         "modulos":"Módulos",
@@ -24,13 +24,13 @@
         "usuarios":"Usuarios",
         "roles":"Roles",
         "cerrar_sesion":"Cerrar Sesión",
-        "lista_usuario":"Lista de usuarios",
-        "crear_usuario":"Crear usuario"
+        "lista_usuario":"Lista de Usuarios",
+        "crear_usuario":"Crear Usuario"
     },
     "modulos":{
         "bienvenido1":"¡Bienvenido ",
-        "bienvenido2":"! Este es el panel podrá encontrar atajos para acceder a los distintos listados de cada módulo del sistema."
-        ,"descripcionSeguridad":"En el módulo Seguridad se podra crear, actualizar y eliminar el usuario."
+        "bienvenido2":"! Este es el Panel Podrá Encontrar Atajos Para Acceder a los Distintos Listados de Cada Módulo del Sistema."
+        ,"descripcionSeguridad":"En el Módulo Seguridad se Podra Crear, Actualizar y Eliminar el Usuario."
     },
     "seguridad":{
         "usuarios":{
@@ -40,11 +40,44 @@
             "usuario":"Usuario",
             "accion":"Acción",
             "estado":"Estado",
-            "identificacionUsuario":"Nº Identificación o usuario",
+            "identificacionUsuario":"Nº Identificación o Usuario",
             "nombresCompletos":"Nombres Completos",
             "todos":"Todos",
             "activo":"Activo",
-            "inactivo":"Inactivo"
+            "inactivo":"Inactivo",
+            "actualizarUsuario":"Actualizar usuario",
+            "activarUsuario":"Activar Usuario",
+            "inactivarUsuario":"Inactivar Usuario",
+            "eliminarUsuario":"Eliminar Usuario",
+            "agregarModulos":"Agregar Modulos",
+            "noExisteResultado":"No Existe Resultados"
+        },
+        "crearUsuario":{
+            "foto":"Foto",
+            "tipoIdentificacion":"Tipo de Identificación",
+            "numeroIdentificacion":"Número de Identificación",
+            "genero":"Género",
+            "primerNombre":"Primer Nombre",
+            "segundoNombre":"Segundo Nombre",
+            "primerApellido":"Primer Apellido",
+            "segundoApellido":"Segundo Apellido",
+            "fechaNacimiento":"Fecha de Nacimiento",
+            "edad":"Edad",
+            "correo":"Correo",
+            "usuario":"Usuario",
+            "telefonoMovil":"Telefono Móvil",
+            "telefonoFijo":"Telefono Fijo",
+            "pais":"Pais",
+            "provincia":"Provincia",
+            "ciudad":"Ciudad",
+            "direccion":"Direccion",
+            "guardar":"Guardar",
+            "datosContacto":"Datos Contactos",
+            "datosResidencia":"Datos Residencia",
+            "datosPersonales":"Datos Personales",
+            "actualizarUsuario":"Actualizar Usuario",
+            "cerrar":"Cerrar",
+            "modulos":"Módulos"
         }
     }
 }

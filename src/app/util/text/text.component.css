@@ -6,3 +6,9 @@
     border-bottom: 1px solid red;
 }
 
+input[readonly]{
+    background-color:transparent;
+    border: 0;
+    font-size: 1em;
+  }
+

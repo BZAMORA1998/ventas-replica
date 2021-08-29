@@ -15,6 +15,7 @@ export class TextComponent implements OnInit {
   @Input() textInt:string="";
   @Input() typeInput:string="text"
   @Output() textOut=new EventEmitter<string>();
+  @Input() inactivar:Boolean=false;
   
   ngOnInit(): void {
   }

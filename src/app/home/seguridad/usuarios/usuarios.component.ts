@@ -88,6 +88,7 @@ export class UsuariosComponent implements OnInit {
     Response=>{
       this.sweetalert2Component.loading(false);
       this.sweetalert2Component.showModalConfirmacion(Response.message,null);
+      window.location.reload();
     },
      error=>{
       this.sweetalert2Component.loading(false);

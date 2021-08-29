@@ -3,7 +3,6 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { GeneralService } from 'src/app/service/general.service';
 import { UsuarioService } from 'src/app/service/usuario.service';
-import { environment } from 'src/environments/environment';
 declare var $:any;
 
 @Component({
@@ -23,10 +22,10 @@ export class UsuariosCAComponent implements OnInit {
   constructor(
     private _generalService:GeneralService,
     private _usuarioService:UsuarioService,
-    private translate: TranslateService,
+    private _translate: TranslateService,
 
   ) {
-    this.translate.setDefaultLang(environment.languaje);
+   
    }
    consultarUsuarioDisponible(){
      if(this.data.primerNombre.length>0 && this.data.primerApellido.length>0 && this.esCreacion==true)
@@ -105,7 +104,12 @@ export class UsuariosCAComponent implements OnInit {
       direccion:""
   }
 
+  public activeLang = 'es';
   ngOnInit(): void {
+
+    this.activeLang=localStorage.getItem("languaje");
+    this._translate.setDefaultLang(this.activeLang);
+
     this.getTipoIdentificacion();
     this.getGenero();
     this.getPais();
@@ -224,12 +228,6 @@ export class UsuariosCAComponent implements OnInit {
             this.genero=Response.data;
 
             this.genero.forEach(element => {
-              if(element.nombre=='M'){
-                element.nombre="Masculino";
-              }else{
-                element.nombre="Femenino";
-              }
-
               element.id=element.secuenciaGenero;
             });
           },

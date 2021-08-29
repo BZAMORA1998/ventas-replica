@@ -3,19 +3,19 @@
         "seleccionar":"To select"
     },
     "login" : {
-        "iniciarSesion":"Login with your account",
+        "iniciarSesion":"Login with your Account",
         "usuario":"User",
         "contrasena":"Password",
-        "bottonInicioSesion":"Log in",
-        "usuarioRequerido":"The user field is required.",
-        "contrasenaRequerido":"The password field is required.",
+        "bottonInicioSesion":"Log In",
+        "usuarioRequerido":"The User Field is Required.",
+        "contrasenaRequerido":"The Password Field is Required.",
         "lenguaje":"Language",
-        "recuperarContrasena":"Recover password",
+        "recuperarContrasena":"Recover Password",
         "emailOUsuario":"Email or User",
-        "enviarContrasena":"Send password",
-        "guardarContrasena":"Save password",
-        "contrasenaNueva":"new password",
-        "conformarContrasenaNueva":"Confirm new password",
+        "enviarContrasena":"Send Password",
+        "guardarContrasena":"Save Password",
+        "contrasenaNueva":"New Password",
+        "conformarContrasenaNueva":"Confirm New Password",
         "cambiarContrasena":"Change Password"
     },
     "home":{
@@ -23,29 +23,62 @@
         "seguridad":"Security",
         "usuarios":"Users",
         "roles":"Roles",
-        "cerrar_sesion":"Sign off",
+        "cerrar_sesion":"SignOoff",
         "lista_usuario":"User List",
-        "crear_usuario":"Create user"
+        "crear_usuario":"Create User"
     },
     "modulos":{
         "bienvenido1":"¡Welcome ",
-        "bienvenido2":"! This is the panel you will be able to find shortcuts to access the different lists of each module of the system."
-        ,"descripcionSeguridad":"In the Security module you can create, update and delete the user."
+        "bienvenido2":"! This is the Panel You Will Be Able to Find Shortcuts to Access the Different Lists of Each Module of the System."
+        ,"descripcionSeguridad":"In the Security Module You Can Create, Update And Delete The User."
 
     },
     "seguridad":{
         "usuarios":{
             "identificacion":"Nº Identification",
-            "primerNombre":"First name",
+            "primerNombre":"First Name",
             "primerApellido":"Surname",
             "usuario":"User",
             "accion":"Action",
             "estado":"State",
-            "identificacionUsuario":"Nº Identification or user",
+            "identificacionUsuario":"Nº Identification or User",
             "nombresCompletos":"Complete Names",
             "todos":"All",
             "activo":"Active",
-            "inactivo":"Inactive"
+            "inactivo":"Inactive",
+            "actualizarUsuario":"Update User",
+            "activarUsuario":"Activate User",
+            "inactivarUsuario":"Inactivate User",
+            "eliminarUsuario":"Delete User",
+            "agregarModulos":"Add Modules",
+            "noExisteResultado":"There Are no Results"
+        },
+        "crearUsuario":{
+            "foto":"Photo",
+            "tipoIdentificacion":"ID Type",
+            "numeroIdentificacion":"Identification Number",
+            "genero":"Gender",
+            "primerNombre":"First Name",
+            "segundoNombre":"Second Name",
+            "primerApellido":"Surname",
+            "segundoApellido":"Second Surname",
+            "fechaNacimiento":"Date of Birth",
+            "edad":"Age",
+            "Correo":"Mail",
+            "usuario":"User",
+            "telefonoMovil":"Mobile Phone",
+            "telefonoFijo":"Landline",
+            "pais":"Country",
+            "provincia":"Province",
+            "ciudad":"Town",
+            "direccion":"Address",
+            "guardar":"To Save",
+            "datosContacto":"Data Contacts",
+            "datosResidencia":"Residence Data",
+            "datosPersonales":"Personal Information",
+            "actualizarUsuario":"Update User",
+            "cerrar":"To Close",
+            "modulos":"Modules"
         }
     }
 }
