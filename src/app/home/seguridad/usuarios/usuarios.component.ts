@@ -31,12 +31,13 @@ export class UsuariosComponent implements OnInit {
 
   public data=null;
 
+  dataUser:any=[];
   ngOnInit(): void {
     this.activeLang=localStorage.getItem("languaje");
     this._translate.setDefaultLang(this.activeLang);
     this.listarUsuario();
 
-     
+    this.dataUser=JSON.parse(localStorage.getItem("data"));
     this.setEstadoLanguaje('seguridad.usuarios.todos',"TODOS");
     this.setEstadoLanguaje('seguridad.usuarios.activo',"ACTIVO");
     this.setEstadoLanguaje('seguridad.usuarios.inactivo',"INACTIVO");

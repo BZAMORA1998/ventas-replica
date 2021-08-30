@@ -68,7 +68,7 @@
                                 <td >
                                     <div class="custom-control custom-switch">
 
-                                        <input [disabled]="d.usuario=='BZAMORA'" (change)="activarOInactivarUsuario(d.secuenciaUsuario)"
+                                        <input [disabled]="d.usuario==dataUser.usuario" (change)="activarOInactivarUsuario(d.secuenciaUsuario)"
                                          type="checkbox" 
                                         name="estado"  #estado="ngModel"  [(ngModel)]="d.estado"  class="custom-control-input" id="customSwitch-{{i}}">
                                         
