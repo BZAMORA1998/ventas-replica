@@ -188,7 +188,6 @@ export class UsuariosCAComponent implements OnInit {
 
   setFechaNacimiento(fechaNacimiento){
     this.data.fechaNacimiento=fechaNacimiento;
-    console.log(fechaNacimiento);
     this.consultarEdad();
   }
 
