@@ -30,7 +30,7 @@
         "ventas":"Sales",
         "usuarios":"Users",
         "roles":"Roles",
-        "cerrar_sesion":"SignOoff",
+        "cerrar_sesion":"Sign Off",
         "lista_usuario":"User List",
         "crear_usuario":"Create User"
     },

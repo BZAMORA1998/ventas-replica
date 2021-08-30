@@ -15,8 +15,15 @@ export class ApiService {
     constructor(private http: HttpClient,private _tokenService:TokenService) { }
     public ApiLoginSpring(method,endpoint,data,headers):Observable<any>{
 
+        var lg=localStorage.getItem('languaje');
+
+        if(lg=="en"){
+          lg="en-US";
+        }
+
         if(headers!=null){
             headers.set("Content-Type","application/json");
+            headers.set("Accept-Language",lg);
         }
 
         switch (method) {
@@ -27,14 +34,22 @@ export class ApiService {
 
 
     public ApiCallSpring(method,endpoint,data,headers):Observable<any>{
+
+        var lg=localStorage.getItem('languaje');
+
+        if(lg=="en"){
+          lg="en-US";
+        }
         
         if(headers!=null){
             headers.set("Content-Type","application/json");
             headers.set("Authorization","Bearer " + this.getToken());
+            headers.set("Accept-Language",lg);
         }else{
             headers = new HttpHeaders({
               "Content-Type":"application/json",
-              "Authorization":"Bearer " + this.getToken()
+              "Authorization":"Bearer " + this.getToken(),
+               "Accept-Language":lg
             });
         }
         switch (method) {
@@ -52,11 +67,19 @@ export class ApiService {
 
     public ApiCallSpringSinSeg(method,endpoint,data,headers):Observable<any>{
 
+        var lg=localStorage.getItem('languaje');
+
+        if(lg=="en"){
+          lg="en-US";
+        }
+        
         if(headers!=null){
             headers.set("Content-Type","application/json");
+            headers.set("Accept-Language",lg);
         }else{
             headers = new HttpHeaders({
-              "Content-Type":"application/json"
+              "Content-Type":"application/json",
+              "Accept-Language":lg
             });
         }
 
