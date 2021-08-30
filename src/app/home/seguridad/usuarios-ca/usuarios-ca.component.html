@@ -71,7 +71,8 @@
                 <div class="col-sm-3 col-6">
                     <div class="form-group">
                         <app-date [icon]="'fas fa-user-lock'" [label]="'seguridad.crearUsuario.fechaNacimiento' | translate"
-                        (dateOut)="setFechaNacimiento($event)" [dateInt]="data.fechaNacimiento"
+                        (dateOut)="setFechaNacimiento($event)" 
+                        [dateInt]="data.fechaNacimiento"
                         [id]="'fechaNacimiento'"></app-date>
                     </div>
                 </div>

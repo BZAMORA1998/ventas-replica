@@ -120,12 +120,20 @@ export class UsuariosCAComponent implements OnInit {
   }
   setPrimerNombre(primerNombre){
     this.data.primerNombre=primerNombre;
+
+    if(this.esCreacion==true){
+      this.getConsultarUsuarioDisponible();
+    }
   }
   setSegundoNombre(segundoNombre){
     this.data.segundoNombre=segundoNombre;
   }
   setPrimerApellido(primerApellido){
     this.data.primerApellido=primerApellido;
+
+    if(this.esCreacion==true){
+      this.getConsultarUsuarioDisponible()
+    }
   }
 
   setSegundoApellido(segundoApellido){
@@ -180,6 +188,8 @@ export class UsuariosCAComponent implements OnInit {
 
   setFechaNacimiento(fechaNacimiento){
     this.data.fechaNacimiento=fechaNacimiento;
+    console.log(fechaNacimiento);
+    this.consultarEdad();
   }
 
 
