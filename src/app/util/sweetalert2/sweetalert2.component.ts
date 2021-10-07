@@ -31,6 +31,7 @@ export class Sweetalert2Component implements OnInit {
     Swal.fire({
       background: 'none',
       heightAuto: false,
+      allowOutsideClick: false,
       showConfirmButton: false,
       html: '<img src="https://i.gifer.com/XVo6.gif" width="50" height="50">'
     })
